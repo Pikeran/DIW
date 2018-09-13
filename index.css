@@ -1,0 +1,39 @@
+.seleccion{
+height: 60px;
+width: 170px;
+float: left;
+margin-right: 15px;
+background-color: brown;
+text-align: center;
+border-radius: 36px 36px 36px 36px;
+-moz-border-radius: 36px 36px 36px 36px;
+-webkit-border-radius: 36px 36px 36px 36px;
+border: 0px solid #000000;
+}
+.izquierdo{
+height: 200px;
+width: 307.5px;
+float: left;
+background-color: lightblue;
+border:solid ;
+border-color: #5224b5;
+
+}
+.cabecera{
+    border-radius: 36px 36px 36px 36px;
+    -moz-border-radius: 36px 36px 36px 36px;
+    -webkit-border-radius: 36px 36px 36px 36px;
+    border: 0px solid #000000;
+
+}
+.seleccion a{
+    font-family: fantasy; 
+    background: linear-gradient(yellow,red);
+    -webkit-background-clip: text;
+    color: transparent; 
+    font-size: 240%;
+    
+}
+.seleccion :hover{
+color: blanchedalmond;
+}

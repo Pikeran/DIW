@@ -4,8 +4,11 @@ height: 30px;
 text-align: center;
 background-color: #60a8e3 ;
 font-size: 20px;
-font-family: 'Courier New', Courier, monospace;
 color:white;
+}
+body{
+    font-family: sans-serif;
+    font-size: 12.6px;
 }
 p{
     text-align: center;
@@ -14,4 +17,11 @@ p{
     width: 200px;
     height: 300px;
     margin: 0 auto;
+}
+table{
+    margin:0 auto;
+}
+td{
+    padding-left: 20px;
+    padding-bottom: 5px;
 }

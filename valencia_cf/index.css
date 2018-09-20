@@ -1,0 +1,35 @@
+body{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+   
+}
+.partido_futbol{
+    border-top: 1px solid #c1c2c2;
+    border-bottom: 1px solid #c1c2c2;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 10;
+}
+#valencia{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+#juventus{
+    width: 100px;
+    height: 100px; 
+    float: right;
+}
+.central_1{
+width: 50%;
+height: 100px;
+background-color: aqua;
+float: left;
+}
+.central_2{
+width: 50%;
+height: 100px;
+background-color: red;
+float: left;
+}

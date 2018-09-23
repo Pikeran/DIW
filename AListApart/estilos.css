@@ -43,3 +43,8 @@ table td{
 .numero{
   align:right;
 }
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}

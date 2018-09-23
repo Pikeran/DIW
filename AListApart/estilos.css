@@ -1,0 +1,45 @@
+.contenido{
+width: 250px;
+height: 600px;
+border: 1px solid #c1c2c2;
+}
+
+.contenido h1,h3{
+  font-family:sans-serif;
+}
+
+.contenido h1{
+  padding-left: 30px;
+  font-size: 25px;
+  margin-bottom: 0;
+  font-weight: 900;
+}
+.contenido img{
+  width: 100%;
+  height: 100px;
+}
+.contenido h3 {
+  padding-left: 30px;
+  color: blue;
+  font-weight: 650;
+  margin-bottom: 0;
+}
+.contenido p{
+padding-left: 30px;
+font-family: serif;
+margin-top: 0;
+}
+table{
+width: 100%;
+padding-left: 30px;
+font-style: italic;
+}
+table th{
+  font:bold 12px;
+}
+table td{
+  border-top:1px dotted;
+}
+.numero{
+  align:right;
+}

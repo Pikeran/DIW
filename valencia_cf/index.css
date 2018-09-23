@@ -34,6 +34,10 @@ a:hover{
     float: right;
 
 }
+.medio{
+  height: 100px;
+  width: 100%;
+}
 
 .central_1{
 width: 50%;
@@ -74,20 +78,37 @@ float: left;
 .central_1 h3{
   float: right;
   padding-top: 30px;
+  padding-right: 10px;
   font-size: 12px;
+  display: inline-block;
 }
 .central_1 h1{
   float: right;
-  font-size: 50px;
+  font-size: 60px;
   padding-right: 10px;
+  border-right:  2px solid #c1c2c2;
 }
 .central_2 h3{
   float: left;
   padding-top: 30px;
+  padding-left: 10px;
   font-size: 12px;
 }
 .central_2 h1{
   float: left;
-  font-size: 50px;
+  font-size: 60px;
   padding-left: 10px;
+}
+.goles{
+height: 30px;
+width: 300px;
+float: left;
+text-align: center;
+font-size: 10px;
+margin-left:50%;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }

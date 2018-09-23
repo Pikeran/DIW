@@ -1,7 +1,19 @@
 body{
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-   
+
 }
+a:link{
+  text-decoration: none;
+}
+a{
+  color: black;
+  font-size: 16px;
+}
+a:hover{
+  color:orange;
+}
+
+
 .partido_futbol{
     border-top: 1px solid #c1c2c2;
     border-bottom: 1px solid #c1c2c2;
@@ -18,18 +30,64 @@ body{
 }
 #juventus{
     width: 100px;
-    height: 100px; 
+    height: 100px;
     float: right;
+
 }
+
 .central_1{
 width: 50%;
 height: 100px;
-background-color: aqua;
 float: left;
 }
 .central_2{
 width: 50%;
 height: 100px;
-background-color: red;
 float: left;
+}
+.resultado_1{
+width: 30%;
+height: 100px;
+float: right;
+}
+.resultado_2{
+width: 30%;
+height: 100px;
+float: left;
+}
+.inferior{
+  width: 100%;
+  height: 100px;
+  float:left;
+  text-align: center;
+}
+.enlaces{
+  border-top: 1px solid #c1c2c2;
+  border-bottom: 1px solid #c1c2c2;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 10;
+}
+
+.central_1 h3{
+  float: right;
+  padding-top: 30px;
+  font-size: 12px;
+}
+.central_1 h1{
+  float: right;
+  font-size: 50px;
+  padding-right: 10px;
+}
+.central_2 h3{
+  float: left;
+  padding-top: 30px;
+  font-size: 12px;
+}
+.central_2 h1{
+  float: left;
+  font-size: 50px;
+  padding-left: 10px;
 }

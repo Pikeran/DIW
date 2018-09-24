@@ -1,0 +1,11 @@
+img{
+position: static;
+}
+
+.ventana{
+   height: 345px;
+   width: 850px;
+   float: left;
+   background-color: gray; 
+   margin: 0 auto;
+}

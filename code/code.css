@@ -1,3 +1,7 @@
+body{
+font-family:sans-serif;
+}
+
 .contenedor{
 width: 1116px;
 height: 183px;
@@ -6,7 +10,6 @@ background: #ecebeb;
 float: left;
 }
 .persona{
-border-right: 1px solid;
 width: 33.2%;
 height: 100%;
 float: left;
@@ -18,8 +21,9 @@ float: left;
 
 }
 .comentario{
+    padding-top: 30px;
     height:100%;
-    width:270.5px;
+    width:260.5px;
     float: left;
 }
 img{
@@ -31,4 +35,27 @@ img{
     -webkit-box-shadow: 7px 10px 21px -1px rgba(0,0,0,0.28);
     -moz-box-shadow: 7px 10px 21px -1px rgba(0,0,0,0.28);
     box-shadow: 7px 10px 21px -1px rgba(0,0,0,0.28);
+}
+.nombre{
+float: left;
+font-size: 14px;
+font-weight: 600;
+}
+.twiter{
+padding-top: 3px;    
+padding-left: 5px;
+float: left;
+font-size: 10px;
+color:#a4a1a1;
+}
+.commit{
+ float: left; 
+}
+p{
+  font-size: 15px; 
+  line-height: 130%;
+  font-weight: 300;
+} 
+strong{
+    color:#1f71f8;
 }

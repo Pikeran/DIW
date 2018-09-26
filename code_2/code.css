@@ -1,0 +1,29 @@
+.contenedor{
+    margin: 0 auto;
+    width: 1000px;
+    height: 500px;
+    border: 1px solid;
+}
+.rectangulo1{
+width: 100%;
+height: 250px;
+float: left;
+}
+.rectangulo2{
+    width: 100%;
+    height: 250px;
+    float: left;
+    background-color: #f4f4f4;
+}
+.rectangulo1 .imagen{
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+    float: left;
+}
+.rectangulo2 .imagen{
+    height: 200px;
+    width: 300px;
+    padding: 20px;
+    float: right;
+}

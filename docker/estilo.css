@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.imagen {
+  color: rgb(73, 107, 129);
+  display: block;
+  font-weight: 300;
+  line-height: 24px;
+  padding-right: 20px;
+  position: absolute;
+  width: 90px;
+  padding-left: 10%;
+}
+
+.imagen img{
+  border-radius: 50%;
+  max-width: 70px;
+}
+
+.articulo {
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 24px;
+  padding-left: 16%;
+  width: 1110px;
+}
+
+.titulo {
+  color: #00adf0;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.persona {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 7px;
+  min-height: 24px;
+}
+
+.persona a {
+  text-decoration: none;
+  color: #58caee;
+}
+
+.enlaces {
+  clear: both;
+  color: grey;
+  display: block;
+  font-size: 12px;
+}
+
+.enlaces a {
+  color: grey;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.contenido {
+  color: grey;
+  line-height: 22px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.contenido a{
+  float: right;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #58caee;
+}

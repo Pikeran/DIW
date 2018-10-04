@@ -1,0 +1,29 @@
+.mui{
+
+    height:150px; 
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+ul{
+    float: left;
+    list-style: none;
+}
+li{
+    float :left ;
+    display: block;
+    border-width: 1px;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 3s, height 3s, background-color 3s, transform 3s;
+}
+li:hover{
+    transition-duration: 1.5s;
+    transform: scale(1.5);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+li:hover+li{
+    transition-duration: 1.5s;
+    transform: scale(0.8);
+}

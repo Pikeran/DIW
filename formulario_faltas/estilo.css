@@ -26,10 +26,11 @@ top:200;
  }
  input {
      height: 30;
+     margin-left: 5;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
-    border: 1px solid #dedede ;
+    border: 0.5px solid black ;
  }
  form{
      position: absolute;
@@ -37,17 +38,31 @@ top:200;
      top:300;
  }
  label{
+     
+     color: white;
      margin-right: 15px;
-     margin-left: 15px;
+     margin-left: 30px;
  }
  .content-form{
      float: left;
+     width: 250px;
+     height: 51px;
      margin-right: 5px;
      border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
-    border: 1px solid #dedede ;
+    border: 1px solid black;
  }
- .somb{
-     background-color: #dedede;
+ form{
+     border: solid black 1px;
+     position: absolute;
+     right: 30;
+     background-color:brown;
+
+ }
+ #enviar{
+     float: right;
+     margin-top: 10px;
+     margin-right: 10px;
+     border: solid green 1px;
  }

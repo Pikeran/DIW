@@ -32,13 +32,17 @@ top:200;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0.5px solid black ;
  }
- form{
+ form#primero{
      position: absolute;
      left:45;   
      top:300;
  }
+ form#segundo{
+    position: absolute;
+    left:45;   
+    top:500;
+}
  label{
-     
      color: white;
      margin-right: 15px;
      margin-left: 30px;
@@ -53,13 +57,26 @@ top:200;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 1px solid black;
  }
- form{
+ form#primero{
      border: solid black 1px;
      position: absolute;
      right: 30;
      background-color:brown;
-
  }
+ form#edicion{
+    border: solid black 1px;
+    position: absolute;
+    top:300;
+    left: 50;
+    background-color:brown;
+}
+ form#segundo{
+    border: solid black 1px;
+    position: absolute;
+    right: 30;
+    background-color:brown;
+
+}
  #enviar{
      float: right;
      margin-top: 10px;

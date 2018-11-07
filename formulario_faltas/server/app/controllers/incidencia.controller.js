@@ -109,24 +109,19 @@ Incidencia.findByIdAndUpdate(req.params.incidenciaId, {
 });
 };
 
-// Borrar un investigador 
+// Borrar una incidencia 
+
 exports.delete = (req,res)=>{
-Incidencia.findByIdAndRemove(req.params.incidenciaId)
-.then(ocurrencia => {
-    if(!ocurrencia) {
-        return res.status(404).send({
-            message: "Incidencia no encontrado " + req.params.incidenciaId
-        });
-    }
-    res.send({message: "Pero madre mia willy"});
-}).catch(err => {
-    if(err.kind === 'ObjectId' || err.name === 'NotFound') {
-        return res.status(404).send({
-            message: "Incidencia not found with id " + req.params.incidenciaId
-        });                
-    }
-    return res.status(500).send({
-        message: "No podemos eliminar esa Incidencia with id " + req.params.incidenciaId
-    });
-});
+
+    let incidenciaId = req.params.incidenciaId;
+     
+    Incidencia.findById(incidenciaId,(err,Incidencia)=>{
+        if(err) res.status(500).send({message: `ERROR AL BORRAR EL PRODUCTO: ${err}`})
+    
+    Incidencia.remove(err =>{
+        if(err)res.status(500).send({message: `ERROR AL BORRAR EL PRODUCTO: ${err}`})
+        res.status(200).send({message: `EL PRODUCTO A SIDO ELIMINADO:`})
+
+    })    
+    })
 };

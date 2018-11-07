@@ -8,9 +8,8 @@ module.exports =(app)=> {
     app.get('/analista',analista.findAll);
 
     //Retrieve a single Incidencia with incidenciaId
-    app.get('/analista/:incidenciaId',
-    analista.findOne);
-
+    app.get('/analista/:incidenciaId',analista.findOne);
+    
     //Update a Incidencia with with incidenciaId
     app.put('/analista/:incidenciaId', analista.update);
 

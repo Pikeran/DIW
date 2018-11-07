@@ -14,16 +14,20 @@
     </div>
     <div id="titulo">COMUNICACIÓ DE MESURES CORRECTORES</div>
    
-    <form method="POST" action="http://localhost:3000/analista">
-            <div class="content-form"><label>ALUMNO/A</label><input type="text" name="alumno" onfocus="somb(this)" on></div>
-            <div class="content-form"><label>GRUP</label><input type="text" name="grup" onfocus="somb(this)"></div>
-            <div class="content-form"><label>PROFESOR/A</label><input type="text" name="profesor" onfocus="somb(this)"></div>
-            <div class="content-form"><label>HORARI</label><input type="text" name="horario" onfocus="somb(this)"></div>
-            <div class="content-form"><label>DATA/INCIDENT</label><input type="date" name="fechaIncidencia" onfocus="somb(this)"></div>
-            <div class="content-form"><label>HORA</label><input type="text" name="hora" onfocus="somb(this)"></div>
-            <div class="content-form"><label>GRAVEDAD</label><input type="text" name="gravedad" onfocus="somb(this)"></div>
+    <form id="primero" method="POST" action="http://localhost:3000/analista">
+            <div class="content-form"><label>ALUMNO/A</label><input type="text" name="alumno"></div>
+            <div class="content-form"><label>GRUP</label><input type="text" name="grup" ></div>
+            <div class="content-form"><label>PROFESOR/A</label><input type="text" name="profesor" ></div>
+            <div class="content-form"><label>HORARI</label><input type="text" name="horario" ></div>
+            <div class="content-form"><label>DATA/INCIDENT</label><input type="date" name="fechaIncidencia"></div>
+            <div class="content-form"><label>HORA</label><input type="text" name="hora" ></div>
+            <div class="content-form"><label>GRAVEDAD</label><input type="text" name="gravedad"></div>
             <input id ="enviar" type="submit">
     </form>
+    <form  id= "segundo" method="DELETE" action="http://localhost:3000/analista">
+        <div class="content-form"><label>Borrar id</label><input type="text" name="identificador"></div>
+        <input id ="borrar" type="submit">
+</form>
 
 </body>
 </html>

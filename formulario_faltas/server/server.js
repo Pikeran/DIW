@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({
 //Parseamos los jsones
 app.use(bodyParser.json());
 
+// Servir con node las paginas estaticas tambien
+app.use(express.static('public'));
+
 //Nos conectamos con la base de datos
 const dbConfig = require('./config/database.config');
 const mongoose = require('mongoose');
@@ -24,6 +27,9 @@ mongoose.connect(dbConfig.url,{
         console.log(" Algo ha pasado...saliendo : ",err);
         process.exit();
     });
+
+
+
 
 // Vamos a definir un "punto de inicio"
 app.get('/',(req,res)=>{

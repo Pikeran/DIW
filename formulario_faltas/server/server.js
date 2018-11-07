@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 // Servir con node las paginas estaticas tambien
 app.use(express.static('public'));
+app.use('/static', express.static(__dirname + '/public'));
 
 //Nos conectamos con la base de datos
 const dbConfig = require('./config/database.config');

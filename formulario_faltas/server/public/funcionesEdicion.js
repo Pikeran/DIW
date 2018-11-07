@@ -1,7 +1,12 @@
-$.getJSON('http://localhost:3000/analista', { get_param: 'value' }, function(data) {
-    $.each(data, function(index, element) {
-        $('body').append($('<div>', {
-            text: element.name
-        }));
+$.getJSON( "http://localhost:3000/analista", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+      console.log(val.alumno);
+      items.push( "<li id='" + key + "'>" + val.alumno + "</li>" );
     });
-});
+   
+    $( "<ul/>", {
+      "class": "my-new-list",
+      html: items.join( "" )
+    }).appendTo( "body" );
+  });

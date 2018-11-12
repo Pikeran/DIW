@@ -1,0 +1,42 @@
+#ficha{
+    position: relative;
+    float: left;
+    top: 50px;
+    left: 500px;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border: solid black 1px;
+}
+#imagen-perfil{
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+    border: solid black 1px;
+}
+#informacion-perfil{
+    position: relative;
+    float: left;
+    top:20px;
+    left: 30px;
+    width: 320px;
+    height: 420px;
+    border: solid black 1px;
+}
+#informacion-nombre{
+    
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}
+#informacion-profesor{
+    
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}

@@ -14,16 +14,41 @@
 </head>
 <body>
  <div id="ficha">
+    <div id="ocultar-informacion">
+        <form id="editar-alumno">
+                <div class="content-form"><label>ALUMNO/A</label><input type="text" name="alumno"></div>
+                <div class="content-form"><label>GRUP</label><input type="text" name="grup" ></div>
+                <div class="content-form"><label>PROFESOR/A</label><input type="text" name="profesor" ></div>
+                <div class="content-form"><label>HORARI</label><input type="text" name="horario" ></div>
+                <div class="content-form"><label>DATA/INCIDENT</label><input type="date" name="fechaIncidencia"></div>
+                <div class="content-form"><label>HORA</label><input type="text" name="hora" ></div>
+                <div class="content-form"><label>GRAVEDAD</label><input type="text" name="gravedad"></div>
+                <input id ="enviar" type="submit">
+        </form>
+    </div> 
     <div id="imagen-perfil"></div>
     <div id="informacion-perfil">
         <div>
-            <label id="informacion-nombre" >NOMBRE: </label>
+            <label id="informacion-nombre" ><strong>Nombre: </strong> </label>
         </div>
-        <div id="informacion-profesor">
-            <label>PROFESOR: </label>
+        <div>
+            <label id="informacion-profesor" ><strong>Profesor: </strong> </label>
         </div>
-
-
+        <div>
+            <label id="informacion-grup" ><strong>Grupo: </strong> </label>
+        </div>
+        <div>
+            <label id="informacion-horario" ><strong>Horario faltas: </strong> </label>
+        </div>
+        <div>
+            <label id="informacion-fecha" ><strong>Fecha: </strong> </label>
+        </div>
+        <div>
+            <label id="informacion-gravedad" ><strong>Gravedad: </strong> </label>
+        </div>
+        <div>
+            <button id="editar-informacion" ><strong>EDITAR: </strong> </button>
+        </div>
     </div>
  </div>
 

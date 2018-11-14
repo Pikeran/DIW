@@ -40,3 +40,64 @@
     width: 320px;
     border-bottom: solid black 1px;
 }
+#informacion-grup{
+    
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}
+#informacion-horario{
+    
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}
+#informacion-fecha{
+    font-size: 13;
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}
+#informacion-gravedad{
+    
+    float: left;
+    height: 20px;
+    width: 320px;
+    border-bottom: solid black 1px;
+}
+#editar-informacion{
+    border:solid black 1px;
+    position: absolute;
+    bottom:5px;
+    right:10px;
+}
+#ocultar-informacion{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 11;
+}
+#editar-alumno div{
+    float: left;
+}
+#editar-alumno label{
+    position: relative;
+    color: white;
+}
+#editar-alumno input{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: calc(50% - 150px);
+}
+#enviar{
+    border:solid black 1px;
+    position: absolute;
+    top: 50px;
+    
+}

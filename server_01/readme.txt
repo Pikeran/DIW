@@ -1,0 +1,3 @@
+git clone <ruta>;
+npm install ...
+Listo!!

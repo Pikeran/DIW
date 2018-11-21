@@ -8,8 +8,21 @@
     <script src="serverpik.js"></script>
 </head>
 <body>
-    <p>
-        Nicee! 
-    </p>
+    <div class="redondo" id="panel-registro-redondo">
+        <label id="initial-state">REGISTRO</label>
+        <form id="registro-sesion" style="display:none ">
+            <label>Nombre de usuario</label><input type="text" name="nombre_usuario">
+            <label>Contraseña</label><input type="text" name="contraseña">
+            <label>Repite contr.</label><input type="text">
+        </form>
+    </div>
+    <div id="div-contenido">
+        <div id="initial-content">
+            <form id="inicio-sesion">
+                <label>Nombre de usuario</label><input type="text" name="nombre_usuario">
+                <label>Contraseña</label><input type="text" name="contraseña">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

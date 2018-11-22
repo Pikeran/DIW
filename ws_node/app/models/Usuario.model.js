@@ -5,7 +5,8 @@ const usuarioShema = mongoose.Schema({
     contraseña: String,
     nombre: String,
     edad: Number,
-    localidad: String
+    localidad: String,
+    correo: String  
 },{
     timestamps:true
 });

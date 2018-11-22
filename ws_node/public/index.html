@@ -10,12 +10,15 @@
 <body>
     <div class="redondo" id="panel-registro-redondo">
         <label id="initial-state">REGISTRO</label>
-        <form id="registro-sesion" style="display:none ">
-            <label>Nombre de usuario</label><input type="text" name="nombre_usuario">
-            <label>Contraseña</label><input type="text" name="contraseña">
-            <label>Repite contr.</label><input type="text">
+        <form id="registro-sesion" method="POST" action="http://localhost:3000/Usuario" style="display:none ">
+            <label>Nombre de usuario</label><input id="input-nombre_usuario" type="text" name="nombre_usuario">
+            <label>Contraseña</label><input id="input-contraseña" type="text" name="contraseña">
+            <label>Repite contr.</label><input id="input-rep_contraseña" type="text">
+            <label>Correo</label><input id="input-correo" type="text">
+            <input id="enviar-registro" type="submit" value="Enviar">
         </form>
     </div>
+    <div id="div-logo"><img src="img/lasenia.png" width="100%" height="100%"></div>
     <div id="div-contenido">
         <div id="initial-content">
             <form id="inicio-sesion">
@@ -23,6 +26,22 @@
                 <label>Contraseña</label><input type="text" name="contraseña">
             </form>
         </div>
+        <div id="info-content">
+            <div id="info-formulario">
+                <ul>
+                    <li>Bienvenidos!! a la app de control de incidencias de Ieslasenia.</li>
+                    <br>
+                    <li>Inicia sesion para acceder al listado de Incidencias.</li>
+                    <br>
+                    <li>O bien registrate con el boton superior,si deseas solicitar tu acceso.</li>
+                </ul>
+            </div>
+            <div id="info-avatar"></div>
+            <div id="div-info-avatar"><img id="img-info-avatar" src="img/avatar-chat.png" width="100%" height="100%"></div>
+        </div>
+    </div>
+    <div class="notificaciones-entrada">
+
     </div>
 </body>
 </html>

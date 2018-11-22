@@ -19,6 +19,7 @@ exports.create = (req,res)=>{
         nombre: req.body.nombre || "Sin nombre",
         edad: req.body.edad || "No especificado",
         localidad: req.body.localidad || "No especificado",
+        correo: req.body.correo || "Sin correo",
     })
 
     usuario.save().then(data =>{
@@ -85,7 +86,7 @@ Usuario.findByIdAndUpdate(req.params.usuarioId, {
     nombre: req.body.nombre || "Sin nombre",
     edad: req.body.edad || "No especificado",
     localidad: req.body.localidad || "No especificado",
-
+    correo: req.body.correo || "Sin correo",
 }, {new: true})
 .then(Usuario => {
     if(!usuario) {

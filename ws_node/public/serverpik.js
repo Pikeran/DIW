@@ -5,7 +5,7 @@ function cargar(){
     document.getElementById("panel-registro-redondo").addEventListener("mouseout",basic_circle,false);
     document.getElementById("panel-registro-redondo").addEventListener("click",abrirformulario,false);
     document.getElementById("input-nombre_usuario").addEventListener("blur",comprobarUsuario,false);
-    document.getElementById("input-contraseña").addEventListener("blur",comprobarContraseña,false);
+    /* document.getElementById("input-contraseña").addEventListener("blur",comprobarContraseña,false); */
     /* document.getElementById("input-rep_contraseña").addEventListener("blur",comprobarContraseña,false); */
     /* document.getElementById("input-correo").addEventListener("blur",comprobarCorreo,false); */
     }
@@ -44,16 +44,19 @@ function cargar(){
         this.removeEventListener("mouseout",basic_circle,false);
         this.removeEventListener("mouseover",animation_circle,false);
         
-        document.getElementById("div-contenido").id = "div-contenido-reducido";
+        
+        
         document.getElementById("initial-state").style.display = "none";
         document.getElementById("info-content").style.display = "none";
+        document.getElementsByClassName("div-contenido").className = "div-contenido-reducido";
         setTimeout (function(){
             document.getElementById("registro-sesion").style="display:inline";
         }, 600); 
+
     }
 
-    function comprobarContraseña(){
-        regexp_password = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}$/);
+  /*   function comprobarContraseña(){
+        
         
     
 
@@ -71,7 +74,7 @@ function cargar(){
             }, 2000); 
         }
 
-    }
+    } */
 
     function comprobarUsuario(){
         if(this.value.length >= 5 && this.value.length <= 8 ){

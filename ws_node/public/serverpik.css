@@ -59,7 +59,7 @@ body{
     top: 40px;
     transition: all 1000ms;
 }
-#div-contenido{
+.div-contenido{
     position: relative;
     z-index: 5;
     left: calc(50% - 500px);
@@ -70,7 +70,7 @@ body{
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
 }
-#div-contenido-reducido{
+.div-contenido-reducido{
     position: relative;
     z-index: 5;
     left: calc(50% - 500px);

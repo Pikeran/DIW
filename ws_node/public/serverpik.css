@@ -150,29 +150,45 @@ body{
 }
 .notificaciones-salida{
     position: absolute;
+    display: block;
     width: 250px;
-    height: 70px;
+    height: auto;
     right: 0;
     top: 10;
-    animation-name: entrada-animacion;
-    animation-duration: 1s;
     background-color: chocolate;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
 }
-.notificaciones-entrada{
+#animacion-button{
+    width: 100px;
+    height: 100px;
+}
+.notificaciones-base{
     position: absolute;
+    display: none;
     width: 250px;
-    height: 70px;
+    height: auto;
     right: -300;
     top: 10;
-    animation-name: salida-animacion;
-    animation-duration: 1s;
+}
+.movimiento-entrada{
+    position: absolute;
+    height: auto;
+    width: 250px;
+    
+    right: -300;
+    top: 10;
     background-color: chocolate;
+    animation-name: entrada-animacion;
+    animation-duration: 1s;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
+}
+.movimiento-salida{
+    animation-name: salida-animacion;
+    animation-duration: 1s; 
 }
 @keyframes entrada-animacion {
     0% {right: 0;}

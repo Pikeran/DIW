@@ -17,7 +17,7 @@ exports.create = (req,res)=>{
         nombre_usuario: req.body.nombre_usuario || "sin nombre de usuario",
         contraseña: req.body.contraseña || "sin contraseña",
         nombre: req.body.nombre || "Sin nombre",
-        edad: req.body.edad || "No especificado",
+        edad: req.body.edad || 0,
         localidad: req.body.localidad || "No especificado",
         correo: req.body.correo || "Sin correo",
     })
@@ -84,7 +84,7 @@ Usuario.findByIdAndUpdate(req.params.usuarioId, {
     nombre_usuario: req.body.nombre_usuario || "sin nombre de usuario",
     contraseña: req.body.contraseña || "sin contraseña",
     nombre: req.body.nombre || "Sin nombre",
-    edad: req.body.edad || "No especificado",
+    edad: req.body.edad || 0,
     localidad: req.body.localidad || "No especificado",
     correo: req.body.correo || "Sin correo",
 }, {new: true})

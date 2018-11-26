@@ -10,7 +10,7 @@
 <body>
     <div class="redondo" id="panel-registro-redondo">
         <label id="initial-state">REGISTRO</label>
-        <form id="registro-sesion" method="POST" action="http://localhost:3000/Usuario" style="display:none ">
+        <form id="registro-sesion" method="POST" action="http://localhost:4242/Usuario" style="display:none ">
             <label>Nombre de usuario</label><input id="input-nombre_usuario" type="text" name="nombre_usuario">
             <label>Contraseña</label><input id="input-contraseña" type="text" name="contraseña">
             <label>Repite contr.</label><input id="input-rep_contraseña" type="text">
@@ -39,9 +39,8 @@
             <div id="info-avatar"></div>
             <div id="div-info-avatar"><img id="img-info-avatar" src="img/avatar-chat.png" width="100%" height="100%"></div>
         </div>
-    </div>
-    <div class="notificaciones-entrada">
-
+    </div>  
+    <div id="notificaciones-div" class="notificaciones-base">
     </div>
 </body>
 </html>

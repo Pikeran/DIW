@@ -99,10 +99,18 @@ body{
     margin-top: 100px;
     margin-left: 130px;
 }
+#registro-sesion input{
+    position: relative;
+    left: calc(50% - 150px);
+    width: 300px;
+}
 #enviar-registro{
     position: absolute;
-    right: calc(50% - 42px);
-    top: 300px;
+    top:50px;
+    border:solid black 1px;
+    border-radius: 44px 44px 44px 44px;
+    -moz-border-radius: 44px 44px 44px 44px;
+    -webkit-border-radius: 44px 44px 44px 44px;
 }
 #info-content{
     position: relative;
@@ -193,10 +201,10 @@ body{
 @keyframes entrada-animacion {
     0% {right: 0;}
     50% {right: 30;}
-    100% {right: -300;}
+    100% {right: -250;}
 }
 @keyframes salida-animacion {
-    0% {right: -300;}
+    0% {right: -250;}
     50% {right: 50;}
     100% {right: 0;}
 }

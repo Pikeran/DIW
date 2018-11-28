@@ -5,9 +5,8 @@ function cargar(){
     document.getElementById("panel-registro-redondo").addEventListener("mouseout",basic_circle,false);
     document.getElementById("panel-registro-redondo").addEventListener("click",abrirformulario,false);
     document.getElementById("input-nombre_usuario").addEventListener("blur",comprobarUsuario,false);
-    /* document.getElementById("input-contraseña").addEventListener("blur",comprobarContraseña,false); */
-    /* document.getElementById("input-rep_contraseña").addEventListener("blur",comprobarContraseña,false); */
-    /* document.getElementById("input-correo").addEventListener("blur",comprobarCorreo,false); */
+    document.getElementById("input-contraseña").addEventListener("blur",comprobarContraseña,false);
+    document.getElementById("input-rep_contraseña").addEventListener("blur",validarpasswd,false); 
     }
 
    var validacionUsuario = false;
@@ -45,27 +44,26 @@ function cargar(){
         this.removeEventListener("mouseover",animation_circle,false);
         
         
-        
+        document.getElementsByClassName("div-contenido")[0].className = "div-contenido-reducido";
         document.getElementById("initial-state").style.display = "none";
         document.getElementById("info-content").style.display = "none";
-        document.getElementsByClassName("div-contenido").className = "div-contenido-reducido";
+
+        
         setTimeout (function(){
             document.getElementById("registro-sesion").style="display:inline";
         }, 600); 
 
     }
 
-  /*   function comprobarContraseña(){
+    function comprobarContraseña(){
         
-        
-    
 
-        if (this.value.match(regexp_password)) {
+        if (/[a-z]/.test(this.value) && /[0-9]/.test(this.value)) {
             validacionUsuario = true;
             this.style.backgroundColor = "green";
             this.style.color = "white"; 
         } else {
-            animarNotificaciones("Entre 15-8 caracteres, al menos una letra mayúscula y 1 caracter especial");    
+            animarNotificaciones("Debe contener numeros y letras");    
             validacionUsuario = false;
             this.style.backgroundColor = "red";
             this.style.color = "white"; 
@@ -74,7 +72,23 @@ function cargar(){
             }, 2000); 
         }
 
-    } */
+    } 
+    
+    function validarpasswd(){
+        if(document.getElementById("input-contraseña").value == this.value && this.value != ""){
+            validacionUsuario = true;
+            this.style.backgroundColor = "green";
+            this.style.color = "white"; 
+        }else {
+            animarNotificaciones("Las contraseñas deben coinicidir");    
+            validacionUsuario = false;
+            this.style.backgroundColor = "red";
+            this.style.color = "white"; 
+            setTimeout (function(){
+                animarNotificaciones("");
+            }, 2000); 
+        }
+    }
 
     function comprobarUsuario(){
         if(this.value.length >= 5 && this.value.length <= 8 ){

@@ -10,12 +10,12 @@
 <body>
     <div class="redondo" id="panel-registro-redondo">
         <label id="initial-state">REGISTRO</label>
-        <form id="registro-sesion" method="POST" action="http://localhost:4242/Usuario" style="display:none ">
+        <form id="registro-sesion" style="display:none">
             <p>Nombre de usuario</p><input id="input-nombre_usuario" type="text" name="nombre_usuario" required="required">
             <p>Contraseña</p><input id="input-contraseña" type="password" name="contraseña" required="required">
             <p>Repite contr.</p><input id="input-rep_contraseña" type="password" required="required">
             <p>Correo</p><input id="input-correo" type="email" required="required">
-            <input id="enviar-registro" type="submit" value="Enviar">
+            <label class="label-envio-registro" id="enviar-registro">ENVIAR</label>
         </form>
     </div>
     <div id="div-logo"><img src="img/lasenia.png" width="100%" height="100%"></div>

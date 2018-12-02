@@ -1,0 +1,43 @@
+body{
+    background-color: #7694ff;
+}
+#contenedor-menu{
+  position: relative;
+  width: 100%;
+  border: solid black 3px;
+  height: 50px;
+  background-color: #254fea;  
+}
+
+#contenedor-menu ul{
+    position: absolute;
+    list-style: none;
+    height: 50px;
+    width: 600px;
+    left: calc(50% - 350px);
+}
+#contenedor-menu a{
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    float: left;
+    margin-top: -10px;
+    width: 200px;
+    font-size: 30px;
+}
+.desactived{
+    color:white;
+}
+.actived{
+    color:#19328d;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+#contenedor-formulario ul{
+    position: absolute;
+    list-style: none;
+    left: calc(50% - 120px);
+}
+#contenedor-formulario{
+    position: relative;
+    height: 500px;
+}

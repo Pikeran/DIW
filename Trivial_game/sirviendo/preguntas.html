@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TRIVIAL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+        <script src="js/fichas.js"></script>
+    </head>
+    <body>
+        
+        <div id="contenedor-menu">
+            <ul>
+                <li><a class="actived" href="/preguntas.html">PREGUNTAS</a></li>
+                <li><a class="desactived" href="/jugar.html">JUGAR</a></li>
+                <li><a class="desactived" href="/acerca.html">ACERCA DE</a></li>
+            </ul>
+    
+        </div>
+
+        <div id="contenedor-formulario">
+            <form id="formulario-preguntas" method="POST" action="http://localhost:4242/Ficha" >
+                <ul>
+                    PREGUNTA : <li><input type="text" name="pregunta"></li>
+                    RESPUESTA 1<li><input type="text" name="respuesta1"></li>
+                    RESPUESTA 2<li><input type="text" name="respuesta2"></li>
+                    RESPUESTA 3<li><input type="text" name="respuesta3"></li>
+                    CORRECTO : <li><input type="number" name="respuestaC"></li>
+                    CATEGORIA :<li><input type="text" name="categoria"></li>
+                    ENVIAR :   <li><input type="submit"></li>
+                </ul>
+            </form>
+        </div>
+
+
+    </body>
+    </html>

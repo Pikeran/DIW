@@ -8,10 +8,20 @@ function cargar() {
     document.getElementById("input-contraseña").addEventListener("blur", comprobarContraseña, false);
     document.getElementById("input-rep_contraseña").addEventListener("blur", validarpasswd, false);
     document.getElementById("enviar-registro").addEventListener("click", enviarJson, false);
+    document.getElementById("iniciar-sesion").addEventListener("click",comprobarInicio,false);
 }
 
 var validacionUsuario = false;
 var validacionContraseña = false;
+
+
+function comprobarInicio(){
+
+    var usario_json = document.getElementById("nombre_usuario").value;
+    var passwd_json = document.getElementById("contraseña").value;
+
+
+}
 
 
 function enviarJson() {
@@ -86,7 +96,7 @@ function abrirformulario() {
 
     setTimeout(function () {
         document.getElementById("registro-sesion").style = "display:inline";
-    }, 600);
+    }, 800);
 
 }
 
@@ -150,6 +160,10 @@ function basic_circle() {
     this.className = "redondo";
     document.getElementById("initial-state").innerText = "REGISTRO";
 }
+
+
+
+
 
 
 

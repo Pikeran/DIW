@@ -4,8 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>serverpik</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="serverpik.css" />
-    <script src="serverpik.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/serverpik.css" />
+    <script src="js/serverpik.js"></script>
 </head>
 <body>
     <div class="redondo" id="panel-registro-redondo">
@@ -21,9 +21,10 @@
     <div id="div-logo"><img src="img/lasenia.png" width="100%" height="100%"></div>
     <div class="div-contenido">
         <div id="initial-content">
-            <form id="inicio-sesion">
-                <label>Nombre de usuario</label><input type="text" name="nombre_usuario">
-                <label>Contraseña</label><input type="text" name="contraseña">
+            <form id="inicio-sesion" method="GET" action="/acceso.html">
+                <label>Nombre de usuario</label><input type="text" name="nombre_usuario" required>
+                <label>Contraseña</label><input type="text" name="contraseña" required>
+                <input id="iniciar-sesion" type="submit" value="Enviar">
             </form>
         </div>
         <div id="info-content">

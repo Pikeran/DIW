@@ -3,7 +3,7 @@ body{
 }
 @font-face {
     font-family: 'azonix';
-    src: url('fonts/azonix.ttf');
+    src: url('../fonts/azonix.ttf');
     font-weight: normal;
     font-style: normal;
   }
@@ -89,8 +89,12 @@ body{
    margin-left: 20px;
 }
 #inicio-sesion input{
-    position: relative;
+   position: relative;
    margin-top:20px;
+}
+#iniciar-sesion{
+    position: relative;
+    left: calc(50% - 30px);
 }
 #registro-sesion{
     position: absolute;
@@ -136,7 +140,7 @@ body{
     border-radius: 44px 44px 44px 44px;
     -moz-border-radius: 44px 44px 44px 44px;
     -webkit-border-radius: 44px 44px 44px 44px;
-    border: 0px solid #000000;
+    border: 2px solid #000000;
 }
 #info-formulario{
     position: absolute;

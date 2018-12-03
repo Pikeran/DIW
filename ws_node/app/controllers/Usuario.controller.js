@@ -67,6 +67,28 @@ Usuario.findById(req.params.usuarioId)
          });
     });
 };
+// Obtener un usuario por nombre_usuario
+
+exports.findTwo = (req,res) => {
+Usuario.find({nombre_usuario:req.params.nombre_usuario})
+.then(usuario=>{
+    if (!usuario){
+        return res.status(404).send({
+            message: "user NOT FOUND con ese nombre " +req.params.nombre_usuario
+        });
+        }
+        res.send(usuario);
+    }).catch(err=>{
+        if(err.kind === 'ObjectId'){
+            return res.status(404).send({
+                message: "usuario no encontrado con ese nombre :" +req.params.nombre_usuario
+            });
+        }
+         return res.status(500).send({
+            message: "Tenemos problemas con ese nombre :" +req.params.nombre_usuario
+         });
+    });
+};
 
 
 

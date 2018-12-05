@@ -18,12 +18,32 @@ var validacionContraseña = false;
 function comprobarInicio(){
 
     var usario_json = document.getElementById("nombre_usuario").value;
-    var passwd_json = document.getElementById("contraseña").value;
+     var passwd_json = document.getElementById("contraseña").value; 
+
+    $.getJSON( "http://localhost:4242/UsuarioNombre/"+usario_json, function( data ) {
+    var items = [];
+    $.each( data, function( key,val ) {
+      console.log(val.nombre_usuario);
+      if(val.nombre_usuario == usario_json&&val.contraseña == passwd_json){
+        alert("acceso permitido");
+        
+        window.location="acceso.html?nombre_usuario="+usario_json;
+
+      } else{
+        animarNotificaciones("Acesso denegado");
+        setTimeout(function () {
+            animarNotificaciones("");
+        }, 2000);
+      }  
+        
+    });
+  });
+
+
+
 
 
 }
-
-
 function enviarJson() {
    
 

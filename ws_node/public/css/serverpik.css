@@ -96,6 +96,10 @@ body{
     position: relative;
     left: calc(50% - 30px);
 }
+#initial-content button{
+    position: relative;
+    margin-top:20px;
+}
 #registro-sesion{
     position: absolute;
     width: 250px;

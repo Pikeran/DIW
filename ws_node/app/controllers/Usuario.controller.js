@@ -81,7 +81,9 @@ Usuario.find({nombre_usuario:req.params.nombre_usuario})
     }).catch(err=>{
         if(err.kind === 'ObjectId'){
             return res.status(404).send({
-                message: "usuario no encontrado con ese nombre :" +req.params.nombre_usuario
+                message: "usuario no encontrado con ese nombre :" +req.params.nombre_usuario,
+                status:false
+                
             });
         }
          return res.status(500).send({

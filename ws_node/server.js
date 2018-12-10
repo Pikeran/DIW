@@ -38,6 +38,9 @@ app.get('/',(req,res)=>{
 
 // Require Usuarios routes : 
 require('./app/routes/Usuario.routes.js')(app);
+// Require Incidencias routes : 
+require('./app/routes/Incidencia.routes.js')(app);
+
 
 
 app.listen(4242,()=>{

@@ -1,6 +1,6 @@
 const Usuario = require('../models/Usuario.model.js');
 
-//crear y salvar
+//crear y salvar Usuario
 
 exports.create = (req,res)=>{
 
@@ -44,6 +44,7 @@ exports.findAll = (req,res) => {
     });
 
 };
+
 
 
 // Obtener un usuario por Id
@@ -91,8 +92,6 @@ Usuario.find({nombre_usuario:req.params.nombre_usuario})
          });
     });
 };
-
-
 
 
 // Actualizar un usuario

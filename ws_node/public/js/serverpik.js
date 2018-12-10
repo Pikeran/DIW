@@ -17,7 +17,7 @@ var validacionContraseña = false;
 
 function comprobarInicio(){
 
-    var usario_json = document.getElementById("nombre_usuario").value;
+     var usario_json = document.getElementById("nombre_usuario").value;
      var passwd_json = document.getElementById("contraseña").value; 
 
     $.getJSON( "http://localhost:4242/UsuarioNombre/"+usario_json, function( data ) {

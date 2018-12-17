@@ -15,10 +15,7 @@ exports.create = (req,res)=>{
     const ficha = new Ficha({
 
         pregunta: req.body.pregunta || "Pregunta vacia",
-        respuesta1: req.body.respuesta1 || "",
-        respuesta2: req.body.respuesta2 || "",
-        respuesta3: req.body.respuesta3 || "",
-        respuestaC: req.body.respuestaC || 0,
+        respuestaC: req.body.respuestaC || "",
         categoria: req.body.categoria || "Sin categoria"
     })
 
@@ -82,10 +79,7 @@ if(!req.body) {
 // Find note and update it with the request body
 Ficha.findByIdAndUpdate(req.params.fichaId, {
     	pregunta: req.body.pregunta || "Pregunta vacia",
-        respuesta1: req.body.respuesta1 || "",
-        respuesta2: req.body.respuesta2 || "",
-        respuesta3: req.body.respuesta3 || "",
-        respuestaC: req.body.respuestaC || 0,
+        respuestaC: req.body.respuestaC || "",
         categoria: req.body.categoria || "Sin categoria"
 }, {new: true})
 .then(Ficha => {

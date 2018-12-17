@@ -24,13 +24,15 @@ function comprobarInicio(){
     var items = [];
     $.each( data, function( key,val ) {
       console.log(val.nombre_usuario);
-      if(val.nombre_usuario == usario_json&&val.contraseña == passwd_json){
+      if(val.nombre_usuario == usario_json && val.contraseña == passwd_json){
         alert("acceso permitido");
         
+
+
         window.location="acceso.html?nombre_usuario="+usario_json;
 
       } else{
-        animarNotificaciones("Acesso denegado");
+        animarNotificaciones("Acceso denegado");
         setTimeout(function () {
             animarNotificaciones("");
         }, 2000);

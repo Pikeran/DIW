@@ -6,7 +6,8 @@ function cargar() {
 var variable;
 
 function title(){
-    document.getElementById("title-autority").innerHTML = variable;
+    titulo_autoridad = "<a href=''>"+variable+"</a>";
+    document.getElementById("title-autority").innerHTML = titulo_autoridad;
 }
 
 function getVarsUrl()
@@ -33,8 +34,6 @@ function Ajax01(){
 function consulta01(data){
         variable = data[0].autoridad;
         title();
-
- 
 }        
 
 

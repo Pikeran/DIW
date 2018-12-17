@@ -2,10 +2,7 @@
 
 const fichaShema = mongoose.Schema({
     pregunta:   String,
-    respuesta1: String,
-    respuesta2: String,
-    respuesta3: String,
-    respuestaC: Number,  
+    respuestaC: String, 
     categoria:  String
 },{
     timestamps:true

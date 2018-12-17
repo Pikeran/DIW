@@ -41,3 +41,22 @@ body{
     position: relative;
     height: 500px;
 }
+#contenedor-listado-fichas{
+    position: relative;
+    top:50px;
+    left: calc(50% - 500px);
+    height: auto;
+    width: 1000px;
+    border:solid black 1px;
+}
+#listado-fichas li{
+    border: solid black 1px;
+}
+#listado-fichas strong{
+    margin-right: 5px;
+    border: solid black 1px;
+    }
+#titulo-listado{
+    text-align: center;
+}
+

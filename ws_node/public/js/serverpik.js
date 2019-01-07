@@ -9,10 +9,12 @@ function cargar() {
     document.getElementById("input-rep_contraseña").addEventListener("blur", validarpasswd, false);
     document.getElementById("enviar-registro").addEventListener("click", enviarJson, false);
     document.getElementById("iniciar-sesion").addEventListener("click",comprobarInicio,false);
+    
 }
 
 var validacionUsuario = false;
 var validacionContraseña = false;
+
 
 
 function comprobarInicio(){

@@ -67,4 +67,34 @@ body{
     width: 100px;
     height: 20px;
 }
+#imprimir1{
+    position: relative;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+}
+#imprimir2{
+    position: relative;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+}
+#obtenerPdf1{
+position: relative;
+left: calc(50% - 250px);
+}
+#obtenerPdf2{
+position: relative; 
+left: calc(50% - 75px);   
+}
+#preguntas-1{
+    position: absolute;
+    font-size: 8px; 
+    left: 250px;
+    top: 65px;
+    z-index: 11;
+}
+#preguntas-1 tr{
+    
+}
 

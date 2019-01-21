@@ -1,9 +1,21 @@
 function cargar() {
     console.log("Pagina cargada...");
     document.getElementById("button-menu").addEventListener("click",menuLateral,false);
+    document.getElementById("registro").addEventListener("click",menuRegistro,false);
     scrollImagenes();
+    comprobarUsuario();
 }
 
+var usuarioTemp = "David";
+
+
+function comprobarUsuario(){
+    if(usuarioTemp != null ){
+        document.getElementById("usuario-enlace").innerText = "Bienvenido "+usuarioTemp;
+    }else{
+        document.getElementById("usuario-enlace").innerText = "Registarte!!";
+    }
+}
 
 function menuLateral(){
     var menu = document.getElementById("menu-lateral");
@@ -14,6 +26,18 @@ function menuLateral(){
         menu.className = "guardado";
     }
 }
+
+
+function menuRegistro(){
+    var menu = document.getElementById("menu-registro");
+    
+    if(menu.className == "guardado02"){
+        menu.className = "mostrado02";
+    }else{
+        menu.className = "guardado02";
+    }
+}
+
 var arrayImagenes = ["./img/noticias_scroll/scroll_01.jpg", "./img/noticias_scroll/scroll_02.jpg", "./img/noticias_scroll/scroll_03.jpg"];
 
 function scrollImagenes(){

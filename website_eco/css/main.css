@@ -69,14 +69,31 @@ body{
     top:calc(50% - 40px);
     height: 70%;
     width: 90%;
-    border: solid 1px black;
+    
 }
-/* .logo-casella{      TODO
-
+ .logo-casella{      
+    background-image: url("../img/png/logo.png");
+    background-size: 400px 70px;
+    background-position: center; 
+    background-repeat: no-repeat;
 }
-.menu-primario{      TODO
+.menu-primario{
+    display: grid;
+    border-bottom: #709b5b 1px solid;
+    height: 40%;    
+    top: calc(50% - 16px);
+    grid-template-columns: 2fr 2fr 1fr; 
+} 
+.menu-primario a{
+    text-decoration: none;
+    font-size: 22;
+    width: 70%;
+    height: 50%;
+    top:calc(50% );
+    text-align: center;
+    color: #709b5b;
+}
 
-} */
 .galeria-img{
     position: relative;
     width: 100%;

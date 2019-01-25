@@ -67,21 +67,20 @@ body{
 }
 .menu-registro{
     float: right;
-    font-size: 30;
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns:1fr 1fr;
     margin-top:8px;
-    height: 60%;
-    width: 25%;
 }
-.menu-registro a{
+.menu-registro button{
     text-decoration: none;
+    font-size: 20;
     text-align: center;
-    color: white;
+    border:0;
+    background-color:  orange;
 }
 .logo-registro{
     background-image: url("../img/png/logo-login.png");
-    background-size: 40px 30px;
+    background-size: 40px 25px;
     background-position: center; 
     background-repeat: no-repeat;
 }

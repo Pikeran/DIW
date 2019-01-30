@@ -3,5 +3,6 @@
 
 <head>
   <title>AnimeKUN</title>
-  <link rel="stylesheet" type="text/css" href="algoritmia.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+<body>

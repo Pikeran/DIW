@@ -12,7 +12,7 @@
   } 
 body{
     margin: 0;
-    background-image: url("../img/jpg/fond.jpg");
+    background-image: url("../img/jpg/fondo-body.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -30,12 +30,12 @@ body{
 
 #contenido-central{
     position: absolute;
-    top: 157;
     left:calc(50% - 600px);
     height: 100%;
     width: 1200px;
     border-radius: 41px 41px 0px 0px;
     background-color: white;
+    box-shadow: -5px 39px 89px 0px rgba(0,0,0,0.75);
 }
 #menu-superior{
     z-index: 999;
@@ -43,6 +43,8 @@ body{
     left:calc(50% - 600px);
     width: 1200px;
     height:160px;
+    top:0;
+    
 }
 .banner-top{
     position: relative;
@@ -67,21 +69,20 @@ body{
 }
 .menu-registro{
     float: right;
-    font-size: 30;
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns:3fr 1fr;
     margin-top:8px;
-    height: 60%;
-    width: 25%;
 }
-.menu-registro a{
+.menu-registro button{
     text-decoration: none;
+    font-size: 20;
     text-align: center;
-    color: white;
+    border:0;
+    background-color:  orange;
 }
 .logo-registro{
     background-image: url("../img/png/logo-login.png");
-    background-size: 40px 30px;
+    background-size: 40px 25px;
     background-position: center; 
     background-repeat: no-repeat;
 }
@@ -116,6 +117,7 @@ body{
     background-color: orange;
     border-top: 1px solid #d77500;
     border-radius: 0px 0px 110px 0px;
+    
 }
 .container-1{
     width: 300px;

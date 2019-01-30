@@ -1,0 +1,96 @@
+#contenedor-principal{
+    margin-top: 200px;
+    padding-left:50px;
+     padding-right:50px;
+    display: grid;
+    grid-gap: 10px;    
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas:
+        "p p a a a"
+        "p p a a a"
+        "p p c c c";
+        
+}
+.perfil > div{
+}
+.fav-animes > div{
+}
+
+.perfil{
+    grid-area: p;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "foto foto"
+        "info info";
+        
+}
+.perfil table{
+    padding: 5%;
+}
+.id-info{
+    color:orange;
+}
+.foto{
+    grid-area: foto;
+    z-index:2;
+    box-shadow: -1px 15px 23px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+    background-color:#2b303b;
+}
+#imagen-perfil{
+    border-radius: 200px 200px 200px 200px;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: inset -3px 3px 31px 12px rgba(0,0,0,0.75);
+    background-image: url('../img/jpg/usuario.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+.info{
+    grid-area: info;
+    z-index:2;
+    background-color:#535c71;
+    box-shadow: -1px 15px 23px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+}
+.fav-animes{
+    grid-area: a;
+    display: grid;
+    grid-gap: 5px;    
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "texto texto"
+        "animes animes";
+}
+.titulo-animes{
+    grid-area: texto;
+    color:#535c71;
+    line-height: 50px;
+    text-align: center;
+    font-size:30;
+    background-color:#2b303b;
+    z-index:2;
+    box-shadow: -1px 15px 23px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+}
+.animes{
+    grid-area: animes;
+    z-index:2;
+    background-color:#535c71;
+    box-shadow: -1px 15px 23px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+}
+.panel-control{
+    grid-area: c;
+}
+.control{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color:#535c71;
+    z-index:3;
+    border-radius: 10px 10px 10px 10px;
+}

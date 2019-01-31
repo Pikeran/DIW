@@ -45,14 +45,15 @@ body{
 .menu-contacto{
     position: absolute;
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     top:calc(50% - 13.4px);
+    margin-left: 5px;
     height: 60%;
-    width: 40%;
+    width: 50%;
 }
 .menu-contacto a{
     text-decoration: none;
-    border-right: 1px white solid;
     text-align: center;
     color: white;
 }
@@ -101,4 +102,10 @@ body{
     background-image: url("../img/jpg/alimentacion-ecologica.jpg");
     background-size: cover;
     background-position: center; 
+}
+.ocultar{
+    display: none;
+}
+.menu-responsive{
+    display: none;
 }

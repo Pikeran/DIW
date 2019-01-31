@@ -1,0 +1,80 @@
+@media screen and (max-width : 1200px) {
+    #menu-superior{
+        left: 0;
+        width: 100%;
+    }
+}
+@media screen and (max-width : 900px) {
+   
+    .menu-contacto{
+        width: 100%;
+    }
+    .menu-principal{
+        display: none;
+    }
+    .menu-responsive{
+        position: absolute;
+        display: inline;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+    }
+    #activar-menu{
+        float: left;
+        margin: 2%;
+        width: 20%;
+        height: 70%;
+        background-image: url("../img/png/menu.png");
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center; 
+        border-radius: 200px 200px 200px 200px;
+        -moz-border-radius: 200px 200px 200px 200px;
+        -webkit-border-radius: 200px 200px 200px 200px;
+    }
+    .logo-casella{
+        float: right;
+        background-size: 80%;
+        margin-top: 10px;
+        width: 65%;
+        height: 100px;
+    }
+    
+}
+@media screen and (max-width:400px) {
+    .menu-contacto{
+        width: 100%;
+    }
+    .menu-principal{
+        display: none;
+    }
+    .menu-responsive{
+        position: absolute;
+        display: inline;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+    }
+    #activar-menu{
+        float: left;
+        margin: 2%;
+        width: 25%;
+        height: 70%;
+        background-image: url("../img/png/menu.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center; 
+        border-radius: 200px 200px 200px 200px;
+        -moz-border-radius: 200px 200px 200px 200px;
+        -webkit-border-radius: 200px 200px 200px 200px;
+    }
+    .logo-casella{
+        float: right;
+        background-size: 100%;
+        margin-top: 10px;
+        width: 65%;
+        height: 100px;
+    }
+    
+   
+}

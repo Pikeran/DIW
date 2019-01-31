@@ -1,10 +1,16 @@
 <header>
 
     <?php
-        if(isset($_SESSION["usuario"])){
-                require("view/header_user.html");
+
+
+
+        if(empty($_SESSION)){
+                
+                require_once("view/header_public.php");   
+     
             }else{
-                require("view/header_public.html");
+                require_once("view/header_user.php");
+                
             }
     ?>
     

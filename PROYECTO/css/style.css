@@ -1,1 +1,63 @@
+body{
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    margin: 0; 
+}
+*:focus { outline: none; }
+#container-header{
+    display: grid;
+    position: fixed;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 60px;
+    background-color: #2b2b2b;
+}
 
+#container-header > div{
+    
+}
+.descripcion{
+    text-decoration: none;
+    line-height: 60px;
+    text-align: center;
+    font-size: 90%;
+    color: white;
+    font-weight: bold;
+}
+.container-logo{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr ;
+}
+.logo{
+ width: 70px;
+ height: 60px;
+ margin-left: calc(50% - 35px);
+ background-image: url("../img/logo-provisional.png");
+ background-size: 100%; 
+ background-position: center;  
+ background-repeat: no-repeat;
+    
+}
+.login-registro{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.login-registro > a{
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    background-color: #2b2b2b;
+    font-weight: bold;
+    font-size: 20;
+    color: white;
+    width: auto;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
+.login-registro > a:hover{
+    transition: 1s;
+    background-color: #4a4a4a;
+}

@@ -1,10 +1,10 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+//error_reporting(E_ALL);   ESTE CODIGO SACA ERRORES EN EL PHP.
+//ini_set('display_errors', '1');
 
 session_start();
-require_once("../view/head.php");
+require_once("../view/head_login.php");
 
 
 if(isset($_SESSION["usuario"])){    //Usuario logeado o creado.
@@ -21,8 +21,7 @@ if(isset($_SESSION["usuario"])){    //Usuario logeado o creado.
             if($user->comprobarUsuario() == false){
                 header('Location: login.php');
             }else{
-                $_SESSION["user-sesion"] =  $user;
-                //$_SESSION[nombre sesion][user]
+                $_SESSION["user-sesion"] =  serialize($user);
                 header('Location: ../index.php');
             }
 
@@ -31,7 +30,7 @@ if(isset($_SESSION["usuario"])){    //Usuario logeado o creado.
             if($user->registrarUsuario() == false){
                 header('Location: login.php');
             }else{
-                $_SESSION["user-sesion"] =  $user;
+                $_SESSION["user-sesion"] = serialize($user);
                 header('Location: ../index.php');
             }
 
@@ -39,7 +38,8 @@ if(isset($_SESSION["usuario"])){    //Usuario logeado o creado.
 
     }else{ //No hemos enviado ninguna comprobacion de logueo o registro.
        
-        require_once("../view/form-sesion.php");
+        require_once("../view/header_login.php");
+        require_once("../view/form_sesion.php");
         require_once("../view/footer.php");
     }
 

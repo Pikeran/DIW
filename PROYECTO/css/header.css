@@ -42,7 +42,7 @@ body{
 .login-registro{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr;
     align-items: center;
 }
 .login-registro > a{
@@ -61,3 +61,57 @@ body{
     transition: 1s;
     background-color: #4a4a4a;
 }
+.zona-sesion{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+}
+.zona-sesion > a{
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    background-color: #2b2b2b;
+    font-weight: bold;
+    font-size: 20;
+    color: white;
+    width: auto;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
+.zona-sesion > form{
+    
+}
+.zona-sesion > a:hover{
+    transition: 1s;
+    background-color: #4a4a4a;
+}
+
+
+.return-home{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:1fr;
+    align-items: center;
+}
+.return-home > a{
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    background-color: #2b2b2b;
+    font-weight: bold;
+    font-size: 40;
+    color: white;
+    width: auto;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
+.return-home > a:hover{
+    transition: 1s;
+    background-color: #4a4a4a;
+}
+.fa, .fab, .fal, .far, .fas {
+    margin-top: 5px;
+    
+}
+

@@ -5,7 +5,6 @@
        <div class="logo"></div>
    </div>
    <div class="login-registro">
-       <a href="controller/login.php" id="login">LOGIN</a>
-       <a href="controller/login.php" id="registro">REGISTRO</a>
+       <a href="controller/login.php" id="login">LOGIN / REGISTRO</a>
    </div> 
 </div>

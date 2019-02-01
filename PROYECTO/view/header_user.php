@@ -1,8 +1,18 @@
-<h1>sesion iniciada</h1>
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 
-//var_dump($_SESSION["user-sesion"]);
-echo $_SESSION["user-sesion"]->getId();
+<?php
+//Obtenemos el objeto de sesión.
+require_once("modelos/Usuario.php");
+$usuarioSesion = $_SESSION["user-sesion"];
+$usuarioSesion = unserialize($usuarioSesion);
 ?>
+
+<div id="container-header">
+   <div class="descripcion">Bienvenido <?php echo $usuarioSesion->getLogin();?> </div>
+   <div class="container-logo">
+       <div class="logo"></div>
+   </div>
+   <div class="zona-sesion">
+        <form action="zona_user.php" method="POST"><input type="hidden" value = <?php echo $usuarioSesion->getId();?> ><input type="submit" value="PERFIL"></form>
+        <a href="controller/cerrar-sesion.php">CERRAR SESION</a>
+   </div> 
+</div>

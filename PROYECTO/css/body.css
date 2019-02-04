@@ -1,0 +1,113 @@
+body{
+    
+}
+#contenedor-wallpaper{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 300px;
+    background-image: url("../img/banner-usuario.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#imagen-perfil{
+    float: left;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: 190px;
+}
+#imagen-perfil >  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 200px 200px 200px 200px;
+    border:solid 2px #2b2b2b;
+}
+#nick-usuario{
+    float: left;
+    position: relative;
+    top: 190px;
+    left: calc(50% - 20px);
+    font-size: 30;
+    color: white;
+    font-weight: bold;
+}
+#contenedor-perfil{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    background-color: white;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-auto-rows: 230px 200px;
+}
+#contenedor-perfil > div{
+    object-fit: cover;
+}
+.item-menu{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+.item-menu:hover{
+    transition: 1s;
+    color:red;
+}
+.item-menu > i,button{
+    margin-top: 13px;
+}
+.item-menu > button{
+    border:0;
+}
+.item-menu > i{
+    font-size: 20;
+}
+.item-main{
+    width: 100%;
+    height: 400px;
+}
+.active{
+    display: grid;
+    grid-template-rows: 1fr 12fr ;
+}
+.no-active{
+    display: none;
+}
+.titulo{
+    font-size: 24;
+    text-align: center;
+    border-bottom: #2b2b2b solid 0.5px;
+}
+.amigo{
+  height: 50px;
+  line-height: 50px;
+}
+
+
+#amigos{
+    
+}
+#animes{
+    
+}
+#ajustes{
+   
+}
+
+
+.item-info{
+    width: 100%;
+    height: 400px;
+    border: solid 1px black;
+}
+.menu-perfil{
+    padding-left: 300px;
+}
+.main-perfil{
+}
+.info-perfil{
+    border: solid 1px black;
+    
+}

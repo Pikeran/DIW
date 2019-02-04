@@ -65,28 +65,40 @@ body{
     display: grid;
     grid-gap: 10px;
     grid-template-columns:1fr 1fr;
-    align-items: center;
 }
 .zona-sesion > a{
     text-decoration: none;
-    line-height: 50px;
+    margin-top: 10px;
+    line-height: 40px;
     text-align: center;
     background-color: #2b2b2b;
     font-weight: bold;
     font-size: 20;
     color: white;
     width: auto;
-    height: 50px;
+    height: 40px;
     border-radius: 10px 10px 10px 10px;
 }
-.zona-sesion > form{
-    
+.zona-sesion form > input{
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #2b2b2b;
+    font-weight: bold;
+    font-size: 20;
+    color: white;
+    width: auto;
+    height: 40px;
+    border-radius: 10px 10px 10px 10px;
 }
 .zona-sesion > a:hover{
     transition: 1s;
     background-color: #4a4a4a;
 }
-
+.zona-sesion form > input:hover{
+    transition: 1s;
+    background-color: #4a4a4a;
+}
 
 .return-home{
     display: grid;

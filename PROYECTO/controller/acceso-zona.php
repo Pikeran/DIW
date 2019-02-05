@@ -5,6 +5,15 @@ require_once("modelos/Usuario.php");
 $usuarioSesion = $_SESSION["user-sesion"];
 $usuarioSesion = unserialize($usuarioSesion);
 
+?>
+
+<input type="hidden" id="idUsuario" value="<?php echo $identificador?>">
+
+<?php
+
+require_once("view/usuario_privado.php");
+
+/*
 if($identificador == $usuarioSesion->getId()){  //En este caso accederemos a un perfil propio y podremos modificar cosas
 
     require_once("view/usuario_privado.php");
@@ -13,5 +22,5 @@ if($identificador == $usuarioSesion->getId()){  //En este caso accederemos a un 
     
     require_once("view/usuario_publico.php");
 }
-
+*/
 ?>

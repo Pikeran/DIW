@@ -4,6 +4,7 @@ body{
 }
 *:focus { outline: none; }
 #container-header{
+    z-index: 9999;
     display: grid;
     position: fixed;
     grid-gap: 20px;

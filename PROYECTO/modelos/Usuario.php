@@ -13,7 +13,7 @@ class Usuario{
     private $location="NoLocation";
     private $email="NoEmail";
     private $creation="NoFecha";
-
+    private $urlImagen="NoImagen";
     
     public function getId(){
         return $this->id;
@@ -46,6 +46,14 @@ class Usuario{
     public function setName($newName){
         $this->name = $newName;
     }
+    public function getImagen(){
+        return $this->urlImagen;
+    }
+    
+    public function setImagen($newUrl){
+        $this->urlImagen = $newUrl;
+    }
+
 
     public function getCogname(){
         return $this->cogname;

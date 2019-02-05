@@ -22,9 +22,7 @@ $usuarioSesion = unserialize($usuarioSesion);
             <div class="active"    id="amigos">
                 <div class="titulo">AMIGOS</div>
                 <div class="contenido">
-                    <div class="amigo">JOSE</div>
-                    <div class="amigo">ADRIAN</div>
-                    <div class="amigo">DAVID</div>
+                    <table id="tabla-amigos"></table>
                 </div>
             </div>
             <div class="no-active" id="animes">

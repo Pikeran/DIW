@@ -1,17 +1,17 @@
 <?php
 
-$identificador = $_POST["identificador"];
+$id_activo = $_POST["identificador"];
 require_once("modelos/Usuario.php");
 $usuarioSesion = $_SESSION["user-sesion"];
 $usuarioSesion = unserialize($usuarioSesion);
 
+
+//pasamos la id por post para facilitarnos al acceso a las credenciales del usuario.
 ?>
-
-<input type="hidden" id="idUsuario" value="<?php echo $identificador?>">
-
+<input type="hidden" id="id_zona_user" value="<?php echo $id_activo?>">
 <?php
 
-require_once("view/usuario_privado.php");
+require_once("view/usuario.php");
 
 /*
 if($identificador == $usuarioSesion->getId()){  //En este caso accederemos a un perfil propio y podremos modificar cosas

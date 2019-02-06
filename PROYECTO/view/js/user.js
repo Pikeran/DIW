@@ -5,12 +5,15 @@ function cargar() {
     document.getElementById("menu-02").addEventListener("click",activarMenu);
     document.getElementById("menu-03").addEventListener("click",activarMenu);
     obtenerAmigos();
+    obtenerImagenUsuario();
 }
+function obtenerImagenUsuario(){
 
+}
 function obtenerAmigos(){
     console.log("consulta1_obteniendo_ids");
     var xhttp = new XMLHttpRequest();
-    var variable = document.getElementById("idUsuario").value;
+    var variable = document.getElementById("id_zona_user").value;
     
 
 
@@ -62,7 +65,8 @@ function imprimirAmigos(usuario){
             "<tr class='box-user'>"
             + "<td>" + usuario[k].login + "</td>"
             + "<td>" + usuario[k].email + "</td>"
-            + "<td>" + "<button><i class='fas fa-user'></i></button></td>"
+            //+ "<td>" + "<button id = "+"home"+usuario[k].id+"><i class='fas fa-user'></i></button></td>"
+            + "<td><form action='zona_user.php' method='POST'><input type='hidden' name='identificador' value ="+usuario[k].id+"><input type='submit' value='PERFIL'></form></td>"
             + "</tr>";
     }
     

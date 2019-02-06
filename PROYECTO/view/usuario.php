@@ -6,8 +6,16 @@ $usuarioSesion = unserialize($usuarioSesion);
 
 
 <div id="contenedor-wallpaper">
-    <div id="imagen-perfil">
-        <img src="img/imagen-usuario.png">
+    <div id="imagen-perfil">  
+      
+        <?php //aqui comprobamos si es nuestra zona usuario para modificar la fotografia.
+            if($usuarioSesion->getId() == $id_activo ){
+                echo "<img src='img/user-files/01.png'>";
+            }else{
+                echo "No es tu pagina";
+            }
+        ?>
+
     </div>
     <div id="nick-usuario"><?php echo $usuarioSesion->getLogin();?></div>
 </div>

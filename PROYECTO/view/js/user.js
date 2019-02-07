@@ -4,12 +4,10 @@ function cargar() {
     document.getElementById("menu-01").addEventListener("click",activarMenu);
     document.getElementById("menu-02").addEventListener("click",activarMenu);
     document.getElementById("menu-03").addEventListener("click",activarMenu);
+    document.getElementById("menu-04").addEventListener("click",activarMenu);
     obtenerAmigos();
-    obtenerImagenUsuario();
 }
-function obtenerImagenUsuario(){
 
-}
 function obtenerAmigos(){
     console.log("consulta1_obteniendo_ids");
     var xhttp = new XMLHttpRequest();
@@ -63,9 +61,8 @@ function imprimirAmigos(usuario){
 
         campo.innerHTML = campo.innerHTML + 
             "<tr class='box-user'>"
-            + "<td>" + usuario[k].login + "</td>"
-            + "<td>" + usuario[k].email + "</td>"
-            //+ "<td>" + "<button id = "+"home"+usuario[k].id+"><i class='fas fa-user'></i></button></td>"
+            + "<td class='login-user anime'>" + usuario[k].login + "</td>"
+            + "<td class='email-user'>" + usuario[k].email + "</td>"
             + "<td><form action='zona_user.php' method='POST'><input type='hidden' name='identificador' value ="+usuario[k].id+"><input type='submit' value='PERFIL'></form></td>"
             + "</tr>";
     }
@@ -79,13 +76,18 @@ function activarMenu(){
         document.getElementById("amigos").className = "no-active";
         document.getElementById("animes").className = "no-active";
         document.getElementById("ajustes").className = "no-active";
+        document.getElementById("mensajes").className = "no-active";
     if(this.id == "menu-01"){
         document.getElementById("amigos").className = "active";
     }else{
         if(this.id == "menu-02"){
             document.getElementById("animes").className = "active";
         }else{
-            document.getElementById("ajustes").className = "active";
+            if(this.id == "menu-03"){
+                document.getElementById("ajustes").className = "active";
+            }else{
+                document.getElementById("mensajes").className = "active";
+            }    
         }
     }
 }

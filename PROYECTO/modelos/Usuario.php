@@ -88,8 +88,19 @@ class Usuario{
     }
 
     //////////FUNCIONES//////////
+    public function obtenerDatos($id){
+        require_once("config/connect.php");
 
+        $cons ="SELECT * FROM USUARIOS WHERE id = '$id'";
+        $result = mysqli_query($conn, $cons);
+        while($row = mysqli_fetch_array($result)){  //DAMOS VALORES AL OBJETO USUARIO
+            $this->id = $row["id"];
+            $this->login = $row["login"];
+            $this->email = $row["email"];
+            $this->creation = $row["CREATED_AT"];
 
+        }
+    }
 
     public function comprobarUsuario(){
         require_once("../config/connect.php");

@@ -16,9 +16,9 @@ $user->obtenerDatos($id_activo);
     <?php //*****BANNER-USUARIO****
 
     if($usuarioSesion->getId() == $id_activo ){
-        echo "<img src=' view/banner-img/".$id_activo.".jpg'>";
+        echo "<img src=' view/user-banner/".$id_activo.".jpg'>";
     }else{
-        echo "<img src=' view/banner-img/".$id_activo.".jpg'>";
+        echo "<img src=' view/user-banner/".$id_activo.".jpg'>";
     }
     ?>
 
@@ -82,10 +82,8 @@ $user->obtenerDatos($id_activo);
                 </div>
             </div>
             <div class="no-active" id="animes">
-                <div class="titulo">ANIMES</div>
-                <table>
-                    <td><form action='zona_anime.php' method='POST'><input type='hidden' name='id_anime' value = 1 ><input type='submit' value='ANIME'></form></td>
-                </table>
+                <div id="div-animes" class="titulo">ANIMES</div>
+                
             </div>
             <div class="no-active" id="ajustes">
                 <div class="titulo">AJUSTES</div>

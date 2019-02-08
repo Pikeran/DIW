@@ -6,10 +6,58 @@ function cargar() {
     document.getElementById("menu-03").addEventListener("click",activarMenu);
     document.getElementById("menu-04").addEventListener("click",activarMenu);
     obtenerAmigos();
+    animesfav();
 }
+function animesfav(){
+    var xhttp = new XMLHttpRequest();
+    var variable = document.getElementById("id_zona_user").value;
 
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let info = JSON.parse(this.responseText);
+            
+            colocarAnimes(info);
+        }
+    };
+
+    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/obtenerFavoritos.php?id="+variable, true);
+    xhttp.send();
+}
+function colocarAnimes(info){
+    var anime;
+
+    for(var k in info){
+       id_anime = info[k].id_anime;
+       obtenerAnime(id_anime);
+       
+    }
+}
+function obtenerAnime(id_anime){
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let infoAnime = JSON.parse(this.responseText);
+            
+            imprimirAnime(infoAnime);
+        }
+    };
+
+    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/obtenerAnime.php?id="+id_anime, true);
+    xhttp.send();
+}
+function imprimirAnime(infoAnime){
+    campo = document.getElementById("animes");
+    for(var k in infoAnime) {
+
+        campo.innerHTML = campo.innerHTML + 
+            "<div class='box-anime'>"
+                + "<img src= '"+infoAnime[k].urlImagen+"'>"
+            + "</div>";
+    }
+}
 function obtenerAmigos(){
-    console.log("consulta1_obteniendo_ids");
+   
     var xhttp = new XMLHttpRequest();
     var variable = document.getElementById("id_zona_user").value;
     
@@ -18,7 +66,7 @@ function obtenerAmigos(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let infoUsuarios = JSON.parse(this.responseText);
-            console.log(infoUsuarios);
+            
             colocarAmigos(infoUsuarios);                 
         }
     };
@@ -28,12 +76,12 @@ function obtenerAmigos(){
 }
 function sacarInfo(info){
     var xhttp = new XMLHttpRequest();
-    console.log(info);
+    
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let infoUsuario = JSON.parse(this.responseText);
-            console.log(infoUsuario);
+            
             imprimirAmigos(infoUsuario)           
         }
     };
@@ -43,7 +91,7 @@ function sacarInfo(info){
 }
 
 function colocarAmigos(informacionUsuarios){
-    console.log("añadiendo amigos");
+   
 
     var user;
 
@@ -72,7 +120,7 @@ function imprimirAmigos(usuario){
 
 
 function activarMenu(){
-    console.log(this);
+    
         document.getElementById("amigos").className = "no-active";
         document.getElementById("animes").className = "no-active";
         document.getElementById("ajustes").className = "no-active";

@@ -2,11 +2,22 @@
     font-family: "anime";
     src: url("../view/fonts/anime.ttf");
 } 
+a:active, a:active * { outline: none !important; -moz-outline-style: none !important; }
+a:focus, a:focus * { outline: none !important; -moz-outline-style: none !important; }
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+        border: none;
+}
+
 .anime{
     font-family: 'anime';
 }
 body{
     z-index: 4;
+    background-color: #dddddd;
 }
 #contenedor-wallpaper{
     position: relative;
@@ -116,9 +127,6 @@ body{
     font-size: 20;
     
 }
-.email-user{
-    
-}
 .item-info{
     width: 100%;
     height: 400px;
@@ -180,18 +188,86 @@ body{
      font-size: 15;
      color:#818181;
  }
+ #animes{
+     
+ }
  #contenedor-anime{
+    font-family: open sans,sans-serif;
     position: relative;
     width: 100%;
     display: grid;
     margin-top: 15px;
     grid-gap: 10px;
-    background-color: white;
     grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
     grid-auto-rows: 230px 200px;
+    
 }
 .main-anime{
     height: 100%;
-    border: solid 1px black;
-
+}
+#imagen-anime{
+    position: relative;
+    z-index: 9;
+    background-color: white;
+    margin:0 auto;
+    top: -100px;
+    width: 60%;
+    height: 300px;
+    border-radius: 10px 10px 10px 10px;
+}
+#imagen-anime > img{
+    position: absolute;
+    padding: 5%;
+    width: 90%;
+    height: 90%;
+}
+.info-anime{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+}
+#categoria-anime{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+#descripcion-anime{
+    font-size: 15;
+    color:#818181;
+}
+.panel-main{
+    position: relative;
+    z-index: 9;
+    margin:0 auto;
+    top: -90px;
+    width: 60%;
+}
+.panel-main > button{
+    padding: 2%;
+    border:0;
+    float: right;
+    font-size: 30;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+}
+.seleccion-fav{
+    display: none;
+}
+.seleccion-fav:hover{
+    color:red;
+}
+.seleccion-fav > label{
+    font-size: 15;
+}
+.box-anime{
+    position: relative;
+    float: left;
+    padding: 5%;
+    width: 130px;
+    height: 130px;
+}
+.box-anime > img {
+    width: 100%;
+    height: 100%;
 }

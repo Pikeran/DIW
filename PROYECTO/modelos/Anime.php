@@ -11,7 +11,7 @@ class Anime{
     private $estado="NoLocation";
     private $descripcion="NoEmail";
     private $creation="NoFecha";
-    private $urlImagen="NoImagen";
+    private $urlBanner="NoImagen";
     
     public function getId(){
         return $this->id;
@@ -27,6 +27,13 @@ class Anime{
     
     public function setName($newName){
         $this->name = $newName;
+    }
+    public function getBanner(){
+        return $this->urlBanner;
+    }
+    
+    public function setBanner($newUrl){
+        $this->urlBanner = $newUrl;
     }
     public function getImagen(){
         return $this->urlImagen;
@@ -83,6 +90,7 @@ class Anime{
             $this->creation = $row["CREATED_AT"];
             $this->estado = $row["estado"];
             $this->descripcion = $row["descripcion"];
+            $this->urlBanner = $row["urlBanner"];
             $this->urlImagen = $row["urlImagen"];
         }
     }

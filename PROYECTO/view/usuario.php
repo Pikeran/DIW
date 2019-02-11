@@ -83,7 +83,6 @@ $user->obtenerDatos($id_activo);
             </div>
             <div class="no-active" id="animes">
                 <div id="div-animes" class="titulo">ANIMES</div>
-                
             </div>
             <div class="no-active" id="ajustes">
                 <div class="titulo">AJUSTES</div>

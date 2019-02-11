@@ -15,46 +15,31 @@ function animesfav(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let info = JSON.parse(this.responseText);
-            
-            colocarAnimes(info);
+            imprimirAnime(info);   
+              
         }
     };
 
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/obtenerFavoritos.php?id="+variable, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/obtenerFavoritos.php?id="+variable, true);
     xhttp.send();
 }
-function colocarAnimes(info){
-    var anime;
 
-    for(var k in info){
-       id_anime = info[k].id_anime;
-       obtenerAnime(id_anime);
-       
-    }
-}
-function obtenerAnime(id_anime){
-    var xhttp = new XMLHttpRequest();
-    
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let infoAnime = JSON.parse(this.responseText);
-            
-            imprimirAnime(infoAnime);
-        }
-    };
-
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/obtenerAnime.php?id="+id_anime, true);
-    xhttp.send();
-}
 function imprimirAnime(infoAnime){
     campo = document.getElementById("animes");
     for(var k in infoAnime) {
 
         campo.innerHTML = campo.innerHTML + 
-            "<div class='box-anime'>"
+            "<div class='box-anime'style='cursor:pointer' onclick= enviar(this) >"
+                + "<form id="+infoAnime[k].id_anime+" method='post' name='anime' action='zona_anime.php'> <input type='hidden' name=id_anime value="+infoAnime[k].id_anime+"></form>"
                 + "<img src= '"+infoAnime[k].urlImagen+"'>"
             + "</div>";
     }
+
+}
+function enviar(aux){
+    aux2 = aux.firstChild;
+    console.log(aux2);
+    document.getElementById(aux2.id).submit();
 }
 function obtenerAmigos(){
    
@@ -71,7 +56,7 @@ function obtenerAmigos(){
         }
     };
 
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/cargarDatosUsuario.php?id="+variable, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/cargarDatosUsuario.php?id="+variable, true);
     xhttp.send();
 }
 function sacarInfo(info){
@@ -85,7 +70,7 @@ function sacarInfo(info){
             imprimirAmigos(infoUsuario)           
         }
     };
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/infoAmigo.php?id="+info, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/infoAmigo.php?id="+info, true);
     xhttp.send();
 
 }

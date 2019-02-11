@@ -19,7 +19,7 @@ function consultaFav(){
         }
     };
 
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/comprobarFavoritos.php?id="+idAnime, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/comprobarFavoritos.php?id="+idAnime, true);
     xhttp.send();
 }
 function favoritos(info){
@@ -44,7 +44,7 @@ function addAnime(){
         }
     };
 
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/addAnime.php?id="+idAnime, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/addAnime.php?id="+idAnime, true);
     xhttp.send();
 }
 function removeAnime(){
@@ -61,7 +61,7 @@ function removeAnime(){
         }
     };
 
-    xhttp.open("GET","http://localhost/DIW/PROYECTO/view/ajax/removeAnime.php?id="+idAnime, true);
+    xhttp.open("GET","http://"+ip+"/view/ajax/removeAnime.php?id="+idAnime, true);
     xhttp.send();
 }
 

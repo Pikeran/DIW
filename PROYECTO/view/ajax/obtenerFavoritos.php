@@ -1,21 +1,23 @@
 <?php
-session_start();
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+    session_start();
 
-$idUser = $_GET["id"];
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
 
-require_once("../../config/connect.php");
+    $idUser = $_GET["id"];
 
-$cons ="SELECT id_anime FROM `FAVORITOS` WHERE id ='$idUser'";
-$result = mysqli_query($conn, $cons);
-$data = array();
+    require_once("../../config/connect.php");
+
+    //$angecon="SELECT * FROM ANIMES where id_anime in (SELECT id_anime FROM `FAVORITOS` WHERE id=6);"
+    $sql  = "SELECT * FROM `ANIMES` WHERE id_anime IN (SELECT id_anime FROM `FAVORITOS` WHERE id = '$idUser')";
+    //mysqli_set_charset('utf8',$conn);
+    $result = mysqli_query($conn, $sql);
+    $data = array();
 
     while ($row = mysqli_fetch_assoc($result)) {
         $data[] = $row;
     }
-    echo json_encode($data);    
-    
 
+    echo $aux = json_encode($data);   
 
 ?>

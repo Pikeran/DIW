@@ -43,7 +43,7 @@ $anime->obtenerDatos($id_anime);
     <div class="info-anime">
        <div id= "descripcion-anime">
        <h1 class="titulo">Sinopsis</h1>
-       <?php //*****DESCRIPCION-ANIME****
+       <?php //*****CATEGORIA-ANIME****
             echo"<p id='categoria-anime'>". $anime->getCategoria()."</p>";
         ?>
        <?php //*****DESCRIPCION-ANIME****
@@ -53,6 +53,21 @@ $anime->obtenerDatos($id_anime);
        </div>
        
     </div>
+    </div>
+    <div class="foro-anime">
+       <div id= "descripcion-anime">
+       <h1 class="titulo">FORO</h1>
+           <div id="descripcion-foro">
+             <button id="addMensaje"><i class="far fa-plus-square"></i><label>ADD MENSAJE</label></button>   
+           </div> 
+           <div id="contenedor-mensajes">
+                
+            </div>   
+            
+       </div>
+       
+    </div>
 </div>
 
    
+

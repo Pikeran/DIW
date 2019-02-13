@@ -29,18 +29,11 @@ function imprimirAnime(infoAnime){
     for(var k in infoAnime) {
 
         campo.innerHTML = campo.innerHTML + 
-            "<div class='box-anime'style='cursor:pointer' onclick= enviar(this) >"
-                + "<form id="+infoAnime[k].id_anime+" method='post' name='anime' action='zona_anime.php'> <input type='hidden' name=id_anime value="+infoAnime[k].id_anime+"></form>"
-                + "<img src= '"+infoAnime[k].urlImagen+"'>"
-            + "</div>";
+                "<a class='box-anime' style='cursor:pointer' href='http://"+ip+"zona_anime.php?id="+infoAnime[k].id_anime+"'><img src= '"+infoAnime[k].urlImagen+"'></a>"
     }
 
 }
-function enviar(aux){
-    aux2 = aux.firstChild;
-    console.log(aux2);
-    document.getElementById(aux2.id).submit();
-}
+
 function obtenerAmigos(){
    
     var xhttp = new XMLHttpRequest();
@@ -96,7 +89,7 @@ function imprimirAmigos(usuario){
             "<tr class='box-user'>"
             + "<td class='login-user anime'>" + usuario[k].login + "</td>"
             + "<td class='email-user'>" + usuario[k].email + "</td>"
-            + "<td><form action='zona_user.php' method='POST'><input type='hidden' name='identificador' value ="+usuario[k].id+"><input type='submit' value='PERFIL'></form></td>"
+            + "<td><form action='zona_user.php' method='GET'><input type='hidden' name='identificador' value ="+usuario[k].id+"><input type='submit' value='PERFIL'></form></td>"
             + "</tr>";
     }
     

@@ -2,10 +2,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$id_anime = $_POST["id_anime"];
+$id_anime = $_GET["id"];
 
 //AQUI EVITAMOS MAL ACCESO A LA PAGINA
-if(!isset($_POST['id_anime'])) {
+if(!isset($_GET['id'])) {
     header('Location: index.php');
 }
 

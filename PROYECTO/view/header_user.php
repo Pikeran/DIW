@@ -12,7 +12,7 @@ $usuarioSesion = unserialize($usuarioSesion);
        <div class="logo"></div>
    </div>
    <div class="zona-sesion">
-        <form action="zona_user.php" method="POST"><input type="hidden" name="identificador" value = <?php echo $usuarioSesion->getId();?> ><input type="submit" value="PERFIL"></form>
+        <form action="zona_user.php" method="GET"><input type="hidden" name="identificador" value = <?php echo $usuarioSesion->getId();?> ><input type="submit" value="PERFIL"></form>
         <a href="controller/cerrar-sesion.php">CERRAR SESION</a>
    </div> 
 </div>

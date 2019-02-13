@@ -2,13 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$id_activo = $_POST["identificador"];
+$id_activo = $_GET["identificador"];
 require_once("modelos/Usuario.php");
 $usuarioSesion = $_SESSION["user-sesion"];
 $usuarioSesion = unserialize($usuarioSesion);
 
 //AQUI EVITAMOS MAL ACCESO A LA PAGINA
-if(!isset($_POST['identificador'])) {
+if(!isset($_GET['identificador'])) {
     header('Location: index.php');
 }
 

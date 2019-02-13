@@ -58,7 +58,16 @@ $anime->obtenerDatos($id_anime);
        <div id= "descripcion-anime">
        <h1 class="titulo">FORO</h1>
            <div id="descripcion-foro">
-             <button id="addMensaje"><i class="far fa-plus-square"></i><label>ADD MENSAJE</label></button>   
+             <button id="addMensaje"><i class="far fa-plus-square"></i><label>MENSAJE</label></button>
+             <div id="escribir-mensaje" class="oculto">
+                    <h3>Escribe tu mensaje:</h3>
+                    <form id = "envio-mensaje" action="ajax/envioMensaje.php" method="GET">
+                    <input type="hidden" value=$id_anime> 
+                        <textarea name="texto-mensaje"></textarea>
+                        <input type="submit" value="Enviar">
+                    </form>   
+             </div>
+                
            </div> 
            <div id="contenedor-mensajes">
                 

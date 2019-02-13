@@ -2,10 +2,17 @@ function cargar() {
     console.log("Pagina cargada...");
     document.getElementById("agregar-anime").addEventListener("click",addAnime);
     document.getElementById("eliminar-anime").addEventListener("click",removeAnime);
-
+    document.getElementById("addMensaje").addEventListener("click",divMensaje);
 
     consultaFav();
     importarForo();
+}
+function divMensaje(){
+    if(document.getElementById("escribir-mensaje").className == "oculto"){
+        document.getElementById("escribir-mensaje").className = "no-oculto"
+    }else{
+        document.getElementById("escribir-mensaje").className = "oculto"
+    }
 }
 function importarForo(){
     var idAnime = document.getElementById("id_anime").value;

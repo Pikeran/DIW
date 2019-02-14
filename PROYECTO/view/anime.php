@@ -8,6 +8,7 @@ require_once("modelos/Anime.php");
 $anime = new Anime();
 $anime->obtenerDatos($id_anime);
 
+
 ?>
 
 
@@ -34,7 +35,7 @@ $anime->obtenerDatos($id_anime);
             </button>
             <button class="seleccion-fav" id="eliminar-anime">
                 <label>Dejar de seguir</label>    
-                <i class="fas fa-thumbs-up"></i> 
+                <i class="fas fa-thumbs-down"></i>
             </button>
             
         </div>
@@ -61,8 +62,8 @@ $anime->obtenerDatos($id_anime);
              <button id="addMensaje"><i class="far fa-plus-square"></i><label>MENSAJE</label></button>
              <div id="escribir-mensaje" class="oculto">
                     <h3>Escribe tu mensaje:</h3>
-                    <form id = "envio-mensaje" action="ajax/envioMensaje.php" method="GET">
-                    <input type="hidden" value=$id_anime> 
+                    <form id = "envio-mensaje" action="view/ajax/envioMensaje.php" method="GET">
+                    <input type="hidden" value= "<?php echo $id_anime ?>" name="id_anime"> 
                         <textarea name="texto-mensaje"></textarea>
                         <input type="submit" value="Enviar">
                     </form>   

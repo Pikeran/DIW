@@ -3,9 +3,31 @@ function cargar() {
     document.getElementById("agregar-anime").addEventListener("click",addAnime);
     document.getElementById("eliminar-anime").addEventListener("click",removeAnime);
     document.getElementById("addMensaje").addEventListener("click",divMensaje);
-
     consultaFav();
     importarForo();
+
+}
+
+function botones(){
+var botones = document.getElementsByClassName("boton-respuesta");
+    for (let i = 0; i < botones.length; i++) {
+        botones[i].addEventListener("click",abrirEnvio);  
+    }   
+}
+function abrirEnvio(){
+    
+    var aux = this.id;
+    var id = aux.substring(4,aux.length);
+   
+    var panel = document.getElementById("responder"+id);
+    if(panel.className == "no-oculto enviar-respuesta"){
+        document.getElementById("responder"+id).className = "oculto enviar-respuesta";
+    } else{
+        document.getElementById("responder"+id).className = "no-oculto enviar-respuesta";
+    } 
+
+
+
 }
 function divMensaje(){
     if(document.getElementById("escribir-mensaje").className == "oculto"){
@@ -24,7 +46,7 @@ function importarForo(){
             let mensajes = JSON.parse(this.responseText);
     
             imprimirForo(mensajes);
-            
+            botones();
         }
     };
 
@@ -43,8 +65,18 @@ function imprimirForo(mensajes){
                     +"</div>"
                     +"<div class='post-body'>"
                         +"<div class='post-name'>"
-                            +"<a class='user-card' href='#' data-id='#'>USUARIO</a>"
+                            +"<a class='user-card' href='zona_user.php?identificador="+mensajes[k].id+"'>"+mensajes[k].login+"</a>"
                             +"<span class='rd' title="+mensajes[k].CREATED_AT+"data-format='tiny'>"+mensajes[k].CREATED_AT+"</span>"
+                            +"<button class='boton-respuesta' id=btnR"+mensajes[k].id_mensaje+">RESPONDER</button>"
+                                +"<div id='responder"+mensajes[k].id_mensaje+"' class='oculto enviar-respuesta'>"
+                                    +"<h3>Responder mensaje:</h3>"
+                                    +"<form action='view/ajax/envioRespuesta.php' method='GET'>"
+                                        +"<input type='hidden' value= '"+document.getElementById("id_anime").value+"' name='id_anime'>" 
+                                        +"<input type='hidden' value= '"+mensajes[k].id_mensaje+"' name='id_padre'>" 
+                                        +"<textarea name='texto-mensaje'></textarea>"
+                                        +"<input type='submit' value='Enviar'>"
+                                    +"</form>"
+                                +"</div>"
                         +"</div>"
                         +"<div class='post-content'>"
                             +"<p>"+mensajes[k].texto+"</p>"
@@ -62,8 +94,19 @@ function imprimirForo(mensajes){
                     +"</div>"
                     +"<div class='post-body'>"
                         +"<div class='post-name'>"
-                            +"<a class='user-card' href='#' data-id='#'>USUARIO</a>"
+                        +"<a class='user-card' href='zona_user.php?identificador="+mensajes[k].id+"'>"+mensajes[k].login+"</a>"
                             +"<span class='rd' title="+mensajes[k].CREATED_AT+"data-format='tiny'>"+mensajes[k].CREATED_AT+"</span>"
+                            +"<button class='boton-respuesta' id=btnR"+mensajes[k].id_mensaje+">RESPONDER</button>"
+                                +"<div id='responder"+mensajes[k].id_mensaje+"' class='oculto enviar-respuesta'>"
+                                    +"<h3>Responder mensaje:</h3>"
+                                    +"<form action='view/ajax/envioRespuesta.php' method='GET'>"
+                                        +"<input type='hidden' value= '"+document.getElementById("id_anime").value+"' name='id_anime'>" 
+                                        +"<input type='hidden' value= '"+mensajes[k].id_mensaje+"' name='id_padre'>" 
+                                        +"<textarea name='texto-mensaje'></textarea>"
+                                        +"<input type='submit' value='Enviar'>"
+                                    +"</form>"
+                                +"</div>"
+                        +"</div>"
                         +"</div>"
                         +"<div class='post-content'>"
                             +"<p>"+mensajes[k].texto+"</p>"

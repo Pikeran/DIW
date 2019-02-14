@@ -44,7 +44,7 @@ $user->obtenerDatos($id_activo);
     <div class="modal-wrapper" id="popup">
         <div class="popup-contenedor">
         
-        <form action="/action_page.php">
+        <form method="POST" enctype="multipart/form-data" action="view/ajax/importarImagen.php">
             CAMBIAR LOGO: <input type="file" name="logo"><br>
             <p class="explicacion">El logo no debe superar los 1000 pixeles</p>
             <input type="submit" value="ENVIAR LOGO">

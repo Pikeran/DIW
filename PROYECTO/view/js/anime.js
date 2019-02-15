@@ -61,7 +61,7 @@ function imprimirForo(mensajes){
             campo.innerHTML = campo.innerHTML + 
                 "<div class='mensaje' id=mensaje"+mensajes[k].id_mensaje+">"
                     +"<div class='post-img'>"
-                        +"<img src=view/user-img/"+mensajes[k].id+".jpg>"
+                        +"<img src="+mensajes[k].urlImagen+">"
                     +"</div>"
                     +"<div class='post-body'>"
                         +"<div class='post-name'>"
@@ -73,6 +73,7 @@ function imprimirForo(mensajes){
                                     +"<form action='view/ajax/envioRespuesta.php' method='GET'>"
                                         +"<input type='hidden' value= '"+document.getElementById("id_anime").value+"' name='id_anime'>" 
                                         +"<input type='hidden' value= '"+mensajes[k].id_mensaje+"' name='id_padre'>" 
+                                        +"<input type='hidden' value= '' name='url'>" 
                                         +"<textarea name='texto-mensaje'></textarea>"
                                         +"<input type='submit' value='Enviar'>"
                                     +"</form>"
@@ -90,7 +91,7 @@ function imprimirForo(mensajes){
             campo2.innerHTML = campo2.innerHTML + 
                 "<div class='respuesta' id=mensaje"+mensajes[k].id_mensaje+">"
                     +"<div class='post-img'>"
-                        +"<img src=view/user-img/"+mensajes[k].id+".jpg>"
+                        +"<img src="+mensajes[k].urlImagen+">"
                     +"</div>"
                     +"<div class='post-body'>"
                         +"<div class='post-name'>"

@@ -3,10 +3,38 @@ function cargar() {
     
     document.getElementById("menu-01").addEventListener("click",activarMenu);
     document.getElementById("menu-02").addEventListener("click",activarMenu);
-    document.getElementById("menu-03").addEventListener("click",activarMenu);
-    document.getElementById("menu-04").addEventListener("click",activarMenu);
     obtenerAmigos();
     animesfav();
+    imgUser();
+    
+}
+function imgUser(){
+    var xhttp = new XMLHttpRequest();
+    var variable = document.getElementById("id_zona_user").value;
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let info = JSON.parse(this.responseText);
+            imprimirImagenes(info);   
+              
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/obtenerImagenes.php?id="+variable, true);
+    xhttp.send();
+}
+function imprimirImagenes(info){
+   let campo1 = document.getElementById("contenedor-wallpaper");
+   let campo2 = document.getElementById("imagen-perfil");
+
+    for(var k in info) {
+        campo2.innerHTML = campo2.innerHTML + 
+                "<img id='img-usuario' src="+info[k].urlImagen+">";
+    }
+    for(var k in info) {
+        campo1.innerHTML = campo1.innerHTML + 
+                "<img id='banner-usuario' src="+info[k].urlBanner+">";
+    }
 }
 function animesfav(){
     var xhttp = new XMLHttpRequest();
@@ -25,7 +53,7 @@ function animesfav(){
 }
 
 function imprimirAnime(infoAnime){
-    campo = document.getElementById("animes");
+    let campo = document.getElementById("animes");
     for(var k in infoAnime) {
 
         campo.innerHTML = campo.innerHTML + 
@@ -60,7 +88,7 @@ function sacarInfo(info){
         if (this.readyState == 4 && this.status == 200) {
             let infoUsuario = JSON.parse(this.responseText);
             
-            imprimirAmigos(infoUsuario)           
+            imprimirAmigos(infoUsuario);           
         }
     };
     xhttp.open("GET","http://"+ip+"/view/ajax/infoAmigo.php?id="+info, true);
@@ -82,7 +110,7 @@ function colocarAmigos(informacionUsuarios){
 }
 function imprimirAmigos(usuario){
 
-    campo = document.getElementById("tabla-amigos");
+   let campo = document.getElementById("tabla-amigos");
     for(var k in usuario) {
 
         campo.innerHTML = campo.innerHTML + 
@@ -97,19 +125,22 @@ function imprimirAmigos(usuario){
 }
 
 
-function activarMenu(){
+function activarMenu(aux){
     
         document.getElementById("amigos").className = "no-active";
         document.getElementById("animes").className = "no-active";
         document.getElementById("ajustes").className = "no-active";
         document.getElementById("mensajes").className = "no-active";
+
+        
+
     if(this.id == "menu-01"){
         document.getElementById("amigos").className = "active";
     }else{
         if(this.id == "menu-02"){
             document.getElementById("animes").className = "active";
         }else{
-            if(this.id == "menu-03"){
+            if(aux.id == "menu-03"){
                 document.getElementById("ajustes").className = "active";
             }else{
                 document.getElementById("mensajes").className = "active";

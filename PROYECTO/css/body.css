@@ -129,16 +129,38 @@ body{
 .item-info{
     width: 100%;
     height: 400px;
-    border: solid 1px black;
 }
+#añadir-amigo{
+    position: relative;
+    left:calc(50% - 50px);
+    top:10px;
+    background-color: #ff4b4b;
+    color: white;
+    width: 100px;
+    height:100px;
+    font-size: 15px;
+    border-radius: 10px 10px 10px 10px;
+}
+#añadir-amigo > i{
+    font-size: 30px;
+}
+#control-friends{
+    position: relative;
+    border:#dddddd solid 0.5px;
+    width: 100%;
+    height: 150px;
+}
+
+
+
+
+
 .menu-perfil{
     padding-left: 300px;
 }
 .main-perfil{
 }
 .info-perfil{
-    border: solid 1px black;
-    
 }
 #popup {
     visibility: hidden;
@@ -426,6 +448,9 @@ a >img{
     height: 90px;
     margin-left: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#banner-usuario{
+    z-index: -1;
 }
 .post-name > div:before{
     content:"";

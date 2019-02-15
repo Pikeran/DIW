@@ -13,25 +13,10 @@ $user->obtenerDatos($id_activo);
 
 <div id="contenedor-wallpaper">
     
-    <?php //*****BANNER-USUARIO****
-
-    if($usuarioSesion->getId() == $id_activo ){
-        echo "<img src=' view/user-banner/".$id_activo.".jpg'>";
-    }else{
-        echo "<img src=' view/user-banner/".$id_activo.".jpg'>";
-    }
-    ?>
 
     <div id="imagen-perfil">  
       
-        <?php //*****IMAGEN-USUARIO****
-
-            if($usuarioSesion->getId() == $id_activo ){
-                echo "<img id='img-usuario' src=' view/user-img/".$id_activo.".jpg'>";
-            }else{
-                echo "<img src=' view/user-img/".$id_activo.".jpg'>";
-            }
-        ?>
+       
 
     </div>
     <div id="nick-usuario"> 
@@ -45,12 +30,12 @@ $user->obtenerDatos($id_activo);
         <div class="popup-contenedor">
         
         <form method="POST" enctype="multipart/form-data" action="view/ajax/importarImagen.php">
-            CAMBIAR LOGO: <input type="file" name="logo"><br>
+            CAMBIAR LOGO: <input type="file" name="logo" accept="image/jpeg"><br>
             <p class="explicacion">El logo no debe superar los 1000 pixeles</p>
             <input type="submit" value="ENVIAR LOGO">
         </form>
-        <form action="/action_page.php">
-            CAMBIAR BANNER: <input type="file" name="banner"><br>
+        <form method="POST" enctype="multipart/form-data" action="view/ajax/importarBanner.php">
+            CAMBIAR BANNER: <input type="file" name="banner" accept="image/jpeg"><br>
             <p class="explicacion">El banner no debe superar los 300 pixeles de alto</p>
             <input type="submit" value="ENVIAR BANNER">
         </form>
@@ -70,12 +55,19 @@ $user->obtenerDatos($id_activo);
     <div class="menu-perfil">
         <div class="item-menu"><i class="fas fa-user"></i><button id="menu-01">AMIGOS</button></div>
         <div class="item-menu"><i class="fas fa-tv"></i></i><button id="menu-02">ANIMES</button></div>
-        <div class="item-menu"><i class="fas fa-tools"></i><button id="menu-03">AJUSTES</button></div>
-        <div class="item-menu"><i class="fas fa-tools"></i><button id="menu-04">MENSAJES</button></div>
+        <?php
+            if($usuarioSesion->getId() == $id_activo){
+                echo "<div class='item-menu'><i class='fas fa-tools'></i><button id='menu-03' onclick='activarMenu(this)'>AJUSTES</button></div>";
+
+                echo "<div class='item-menu'><i class='fas fa-tools'></i><button id='menu-04' onclick='activarMenu(this)'>MENSAJES</button></div>";
+            }else{
+
+            }    
+        ?>
     </div>
     <div class="main-perfil">
         <div class="item-main">
-            <div class="active"    id="amigos">
+            <div class="active"  id="amigos">
                 <div class="titulo">AMIGOS</div>
                 <div class="contenido">
                     <table id="tabla-amigos"></table>
@@ -93,7 +85,13 @@ $user->obtenerDatos($id_activo);
         </div>
     </div>
     <div class="info-perfil">
-        <div class="item-info"></div>
+        <div class="item-info">
+          <div id="control-friends">  
+            <button class="active" id="añadir-amigo">añadir amigo<i class="fas fa-user-plus"></i></button>
+            <button class="no-active" id="añadir-amigo">borrar amigo<i class="fas fa-user-minus"></i></i></button>
+          </div>  
+          
+        </div>
         
     </div>
 </div>

@@ -6,6 +6,61 @@ function cargar() {
     obtenerAmigos();
     animesfav();
     imgUser();
+    boton_amigo_comprobacion();
+}
+function añadirAmigo(variable){
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/añadirAmigo.php?id="+variable, true);
+    xhttp.send();
+}
+function borrarAmigo(variable){
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();      
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/borrarAmigo.php?id="+variable, true);
+    xhttp.send();
+}
+function boton_amigo_comprobacion(){
+    var xhttp = new XMLHttpRequest();
+    var variable = document.getElementById("id_zona_user").value;
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let respuesta  = this.responseText;
+            
+
+            if(respuesta == "unico"){ 
+            }else{
+                imprimirBotonAmigo(respuesta);
+            }               
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/comprobarAmigo.php?id="+variable, true);
+    xhttp.send();
+}
+function imprimirBotonAmigo(valor){
+    let campo = document.getElementById("control-friends");
+    let id = document.getElementById('id_zona_user').value;
+        if(valor == "false"){
+            campo.innerHTML = campo.innerHTML + 
+            " <button id='añadir-amigo' onclick='añadirAmigo("+id+")'>Seguir<i class='fas fa-user-plus'></i></button>";
+        }else{
+            campo.innerHTML = campo.innerHTML + 
+            " <button id='borrar-amigo'onclick='borrarAmigo("+id+")'>Dejar de seguir<i class='fas fa-user-minus'></i></button>";
+        }
     
 }
 function imgUser(){

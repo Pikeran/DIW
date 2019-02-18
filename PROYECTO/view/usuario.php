@@ -68,7 +68,7 @@ $user->obtenerDatos($id_activo);
     <div class="main-perfil">
         <div class="item-main">
             <div class="active"  id="amigos">
-                <div class="titulo">AMIGOS</div>
+                <div class="titulo">Seguidores</div>
                 <div class="contenido">
                     <table id="tabla-amigos"></table>
                 </div>
@@ -86,10 +86,16 @@ $user->obtenerDatos($id_activo);
     </div>
     <div class="info-perfil">
         <div class="item-info">
-          <div id="control-friends">  
-            <button class="active" id="añadir-amigo">añadir amigo<i class="fas fa-user-plus"></i></button>
-            <button class="no-active" id="añadir-amigo">borrar amigo<i class="fas fa-user-minus"></i></i></button>
-          </div>  
+        <?php //*****agregar-amigos****
+
+            if($usuarioSesion->getId() == $id_activo ){
+                          
+            }else{
+                echo  "<div id='control-friends'></div>";  
+            }
+        ?>
+
+         
           
         </div>
         

@@ -44,8 +44,9 @@ function importarForo(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let mensajes = JSON.parse(this.responseText);
-    
+            
             imprimirForo(mensajes);
+            
             botones();
         }
     };
@@ -73,7 +74,6 @@ function imprimirForo(mensajes){
                                     +"<form action='view/ajax/envioRespuesta.php' method='GET'>"
                                         +"<input type='hidden' value= '"+document.getElementById("id_anime").value+"' name='id_anime'>" 
                                         +"<input type='hidden' value= '"+mensajes[k].id_mensaje+"' name='id_padre'>" 
-                                        +"<input type='hidden' value= '' name='url'>" 
                                         +"<textarea name='texto-mensaje'></textarea>"
                                         +"<input type='submit' value='Enviar'>"
                                     +"</form>"

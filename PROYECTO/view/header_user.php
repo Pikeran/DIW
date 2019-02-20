@@ -13,6 +13,7 @@ $usuarioSesion = unserialize($usuarioSesion);
        <div class="logo"></div>
    </div>
    <div class="zona-sesion">
+       <div class="lista-animes"><button id="envio-listado-animes" onclick=" location.href='listado-animes.php' ">ANIMES</button></div>
         <div class="box">
             <div class="container-1">
                 <span class="icon"><i class="fa fa-search"></i></span>

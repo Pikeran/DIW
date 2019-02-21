@@ -53,13 +53,13 @@ $user->obtenerDatos($id_activo);
 </div>
 <div id="contenedor-perfil">
     <div class="menu-perfil">
-        <div class="item-menu"><i class="fas fa-user"></i><button id="menu-01">AMIGOS</button></div>
-        <div class="item-menu"><i class="fas fa-tv"></i></i><button id="menu-02">ANIMES</button></div>
+        <div class="item-menu"><i class="fas fa-user"></i><button class='anime' id="menu-01">Siguiendo</button></div>
+        <div class="item-menu"><i class="fas fa-tv"></i></i><button class='anime' id="menu-02">Animes</button></div>
         <?php
             if($usuarioSesion->getId() == $id_activo){
-                echo "<div class='item-menu'><i class='fas fa-tools'></i><button id='menu-03' onclick='activarMenu(this)'>AJUSTES</button></div>";
+                echo "<div class='item-menu'><i class='fas fa-tools'></i><button class='anime' id='menu-03' onclick='activarMenu(this)'>Ajustes</button></div>";
 
-                echo "<div class='item-menu'><i class='fas fa-tools'></i><button id='menu-04' onclick='activarMenu(this)'>MENSAJES</button></div>";
+                //echo "<div class='item-menu'><i class='fas fa-tools'></i><button class='anime' id='menu-04' onclick='activarMenu(this)'>Mensajes</button></div>";
             }else{
 
             }    
@@ -78,6 +78,18 @@ $user->obtenerDatos($id_activo);
             </div>
             <div class="no-active" id="ajustes">
                 <div class="titulo">AJUSTES</div>
+                    <div class="cambio">
+                        <button class="anime" id="cambio-nombre">CAMBIAR NOMBRE :</button><input id="result-nombre" type="text">
+                    </div>
+                    <div class="cambio">
+                        <button  class="anime" id="cambio-apellido">CAMBIAR APELLIDOS :</button><input id="result-apellidos" type="text">
+                    </div>
+                    <div class="cambio">
+                        <button  class="anime" id="cambio-localidad">CAMBIAR LOCALIDAD :</button><input id="result-localidad" type="text">
+                    </div>
+                    <div class="cambio">
+                        <button  class="anime" id="cambio-descripcion">CAMBIAR DESCRIPCION :</button><textarea id="result-descripcion"></textarea>
+                    </div>
             </div>
             <div class="no-active" id="mensajes">
                 <div class="titulo">MENSAJES</div>
@@ -94,7 +106,17 @@ $user->obtenerDatos($id_activo);
                 echo  "<div id='control-friends'></div>";  
             }
         ?>
-
+        <div id="sobreMi">
+            <h2 class="anime">Sobre mi</h2>
+            <div><strong>NOMBRE:</strong><span id="nombre-usuario"><?php echo $user->getName();?></span></div>
+            <div><strong>APELLIDOS:</strong><span id="nombre-usuario"><?php echo $user->getCogname();?></span></div>
+            <div><strong>LOCALIDAD:</strong><span id="nombre-usuario"><?php echo $user->getLocation();?></span></div>
+            <div id="descripcion">
+            <strong>DESCRIPCION:</strong>
+            <div><span id="nombre-usuario"><?php echo $user->getDescripcion();?></span></div>
+            </div>
+        
+        </div>
          
           
         </div>

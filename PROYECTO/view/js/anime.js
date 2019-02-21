@@ -7,7 +7,6 @@ function cargar() {
     importarForo();
 
 }
-
 function botones(){
 var botones = document.getElementsByClassName("boton-respuesta");
     for (let i = 0; i < botones.length; i++) {

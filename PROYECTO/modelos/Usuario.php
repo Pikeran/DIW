@@ -6,6 +6,7 @@
 class Usuario{
        
     private $id=0;
+    private $descripcion = "sinDescripcion";
     private $login="NoName";
     private $passwd="NoPasswd";
     private $name="NoName";
@@ -43,8 +44,11 @@ class Usuario{
         return $this->name;
     }
     
-    public function setName($newName){
+    public function setName($newName,$id){
         $this->name = $newName;
+        require_once("config/connect.php");
+        $cons ="UPDATE `USUARIOS` SET `nombre` = '$newName' WHERE `USUARIOS`.`id` = $id;";
+        $result = mysqli_query($conn, $cons);
     }
     public function getImagen(){
         return $this->urlImagen;
@@ -61,6 +65,13 @@ class Usuario{
     
     public function setCogname($newCogname){
         $this->cogname = $newCogname;
+    }
+    public function getDescripcion(){
+        return $this->descripcion;
+    }
+    
+    public function setDescripcion($newDescripcion){
+        $this->descripcion = $newDescripcion;
     }
 
     public function getLocation(){
@@ -98,10 +109,12 @@ class Usuario{
             $this->login = $row["login"];
             $this->email = $row["email"];
             $this->creation = $row["CREATED_AT"];
-
+            $this->name = $row["nombre"];
+            $this->cogname = $row["apellido"];
+            $this->location = $row["localidad"];
+            $this->descripcion = $row["descripcion"];
         }
     }
-
     public function comprobarUsuario(){
         require_once("../config/connect.php");
 
@@ -122,7 +135,7 @@ class Usuario{
                 $this->passwd = $row["passwd"];
                 $this->email = $row["email"];
                 $this->creation = $row["CREATED_AT"];
-
+                $this->descripcion = $row["descripcion"];
             }
             return true;
         }else{

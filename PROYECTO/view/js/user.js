@@ -3,11 +3,69 @@ function cargar() {
     
     document.getElementById("menu-01").addEventListener("click",activarMenu);
     document.getElementById("menu-02").addEventListener("click",activarMenu);
+    document.getElementById("cambio-nombre").addEventListener("click",cambiarNombre);
+    document.getElementById("cambio-apellido").addEventListener("click",cambiarApellido);
+    document.getElementById("cambio-localidad").addEventListener("click",cambiarLocalidad);
+    document.getElementById("cambio-descripcion").addEventListener("click",cambiarDescripcion);
     obtenerAmigos();
     animesfav();
     imgUser();
     boton_amigo_comprobacion();
 }
+function cambiarNombre(){
+    let newNombre = document.getElementById("result-nombre").value;
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/cambiarDatos.php?nombre="+newNombre, true);
+    xhttp.send();
+}
+function cambiarApellido(){
+    newApellidos = document.getElementById("result-apellidos").value;
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/cambiarDatos.php?apellidos="+newApellidos, true);
+    xhttp.send();
+}
+function cambiarLocalidad(){
+    newLocalidad = document.getElementById("result-localidad").value;
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/cambiarDatos.php?localidad="+newLocalidad, true);
+    xhttp.send();
+}
+function cambiarDescripcion(){
+    newDescripcion = document.getElementById("result-descripcion").value;
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            location.reload();
+        }
+    };
+
+    xhttp.open("GET","http://"+ip+"/view/ajax/cambiarDatos.php?descripcion="+newDescripcion, true);
+    xhttp.send();
+}
+
+
 function añadirAmigo(variable){
     var xhttp = new XMLHttpRequest();
     
@@ -56,10 +114,10 @@ function imprimirBotonAmigo(valor){
     let id = document.getElementById('id_zona_user').value;
         if(valor == "false"){
             campo.innerHTML = campo.innerHTML + 
-            " <button id='añadir-amigo' onclick='añadirAmigo("+id+")'>Seguir<i class='fas fa-user-plus'></i></button>";
+            " <button id='añadir-amigo' onclick='añadirAmigo("+id+")'><i class='fas fa-user-plus'></i></button>";
         }else{
             campo.innerHTML = campo.innerHTML + 
-            " <button id='borrar-amigo'onclick='borrarAmigo("+id+")'>Dejar de seguir<i class='fas fa-user-minus'></i></button>";
+            " <button id='borrar-amigo'onclick='borrarAmigo("+id+")'><i class='fas fa-user-minus'></i></button>";
         }
     
 }

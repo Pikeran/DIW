@@ -5,7 +5,7 @@ $servidor = "localhost";
 $usuario = "daw";
 $password = "daw";
 $bbdd = "Animekun";
-            
+          
    $conn = mysqli_connect($servidor, $usuario, $password, $bbdd);
     
         if (!$conn) {
